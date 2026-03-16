@@ -33,7 +33,7 @@
     </script>
 
     <!-- Themify Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@icon/themify-icons/themify-icons.css">
 
     <!-- AOS Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -48,6 +48,19 @@
     <style>
         body { font-family: 'Nunito Sans', sans-serif; color: #555; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; color: #1a1a1a; font-weight: 500; }
+
+        /* Fix Themify Icons - Tailwind preflight overrides font-family */
+        [class^="ti-"], [class*=" ti-"] {
+            font-family: 'themify-icons' !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
         /* Sidebar */
         #sidebar { background: linear-gradient(180deg, #F6F1F0 0%, #efe8e6 100%); }
