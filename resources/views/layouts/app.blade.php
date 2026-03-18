@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Olivia & Enrico Wedding')</title>
-    <meta name="description" content="Olivia & Enrico – Wedding Website">
+    <title>@yield('title', 'Faith & Samuel Wedding')</title>
+    <meta name="description" content="Faith & Samuel – Wedding Website">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -132,6 +132,9 @@
         /* Page transition */
         .page-content { animation: fadeInUp 0.6s ease-out; }
 
+        /* Banner image background */
+        .banner-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+
         /* LightGallery wedding theme */
         .lg-backdrop { background: rgba(75, 0, 130, 0.95) !important; }
         .lg-toolbar { background: rgba(75, 0, 130, 0.8) !important; }
@@ -191,8 +194,8 @@
                     <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-royal-purple/10 flex items-center justify-center group-hover:bg-royal-purple/20 transition-colors duration-300">
                         <i class="ti-heart text-3xl text-royal-purple heart-animation"></i>
                     </div>
-                    <h2 class="font-alex text-3xl text-royal-purple mb-1">Olivia <span class="text-lilac">&amp;</span> Enrico</h2>
-                    <p class="font-nunito text-xs tracking-[0.25em] text-gray-500 uppercase">15 December 2026</p>
+                    <h2 class="font-alex text-3xl text-royal-purple mb-1">Faith <span class="text-lilac">&amp;</span> Samuel</h2>
+                    <p class="font-nunito text-xs tracking-[0.25em] text-gray-500 uppercase">30 May 2026</p>
                 </a>
             </div>
 
@@ -228,7 +231,7 @@
             <div class="p-6 text-center">
                 <div class="w-12 h-px bg-lilac/60 mx-auto mb-4"></div>
                 <p class="text-xs text-gray-400 font-nunito leading-relaxed">
-                    Olivia & Enrico Wedding<br>
+                    Faith & Samuel Wedding<br>
                     Brooklyn, New York
                 </p>
                 <div class="flex justify-center gap-3 mt-3">
@@ -315,7 +318,7 @@
 
         // Wedding Countdown
         (function () {
-            const countDown = new Date("Dec 15, 2026 00:00:00").getTime();
+            const countDown = new Date("May 30, 2026 00:00:00").getTime();
             setInterval(function() {
                 const now = new Date().getTime(), d = countDown - now;
                 const day = 86400000, hour = 3600000, min = 60000, sec = 1000;

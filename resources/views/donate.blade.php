@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Donate - Olivia & Enrico Wedding')
+@section('title', 'Donate - Faith & Samuel Wedding')
 
 @section('content')
 <!-- Hero -->
@@ -32,7 +32,7 @@
                     </div>
                     <div class="flex justify-between items-center py-3 border-b border-gray-100">
                         <span class="font-nunito font-semibold text-gray-600 text-sm">Account Name:</span>
-                        <span class="font-nunito text-gray-900 font-medium">Olivia & Enrico Wedding</span>
+                        <span class="font-nunito text-gray-900 font-medium">Faith & Samuel Wedding</span>
                     </div>
                     <div class="flex justify-between items-center py-3 border-b border-gray-100">
                         <span class="font-nunito font-semibold text-gray-600 text-sm">Account Number:</span>

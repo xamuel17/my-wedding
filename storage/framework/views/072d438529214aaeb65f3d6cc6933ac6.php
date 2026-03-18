@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Wishes Showcase - Olivia & Enrico Wedding'); ?>
+<?php $__env->startSection('title', 'Wishes Showcase - Faith & Samuel Wedding'); ?>
 
 <?php $__env->startSection('content'); ?>
 <!-- Hero -->

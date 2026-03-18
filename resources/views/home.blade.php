@@ -5,22 +5,17 @@
 @section('content')
 <!-- Header Video -->
 <header id="home" class="relative h-screen overflow-hidden">
-    <div class="video-background">
-        <video autoplay loop muted playsinline class="w-full h-full object-cover">
-            <source src="https://duruthemes.com/demo/html/olivia-enrico/video.mp4" type="video/mp4">
-            <source src="https://duruthemes.com/demo/html/olivia-enrico/video.webm" type="video/webm">
-        </video>
-    </div>
+    <div class="banner-image" style="background-image: url('{{ asset('assets/gallery/18.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70"></div>
 
-    <div class="absolute inset-0 flex items-center justify-center text-white text-center px-4">
+    <div class="absolute inset-0 flex items-center justify-center text-white text-center px-4 mt-100">
         <div class="container mx-auto">
             <div data-aos="fade-down" data-aos-duration="1000">
                 <span class="inline-block w-16 h-px bg-white/50 mb-6"></span>
             </div>
-            <h1 class="font-alex text-5xl sm:text-6xl lg:text-8xl mb-4" data-aos="zoom-in" data-aos-duration="1200">Olivia & Enrico</h1>
+            <h1 class="font-alex text-5xl sm:text-6xl lg:text-8xl mb-4 text-white/80" data-aos="zoom-in" data-aos-duration="1200">Faith & Samuel</h1>
             <h5 class="font-nunito text-sm sm:text-lg lg:text-xl tracking-[0.3em] uppercase mb-8 text-white/80" data-aos="fade-up" data-aos-delay="300">
-                15 December, 2026 – New York
+                30 May, 2026 – Lagos, Nigeria
             </h5>
             <div data-aos="fade-up" data-aos-delay="500">
                 <span class="inline-block w-16 h-px bg-white/50 mb-8"></span>
@@ -52,12 +47,12 @@
             <!-- Bride -->
             <div class="flex flex-col sm:flex-row items-center bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-500" data-aos="fade-right" data-aos-delay="100">
                 <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-4 sm:mb-0 sm:mr-6 ring-4 ring-lilac/30 flex-shrink-0">
-                    <img src="{{ asset('assets/images/bride.jpg') }}" alt="Olivia" class="w-full h-full object-cover">
+                    <img src="{{ asset('assets/images/bride.jpg') }}" alt="Faith" class="w-full h-full object-cover">
                 </div>
                 <div class="text-center sm:text-left">
-                    <h6 class="font-cormorant text-2xl mb-1">Olivia Martin <i class="ti-heart text-lilac text-sm heart-animation"></i></h6>
+                    <h6 class="font-cormorant text-2xl mb-1">Faith Michael <i class="ti-heart text-lilac text-sm heart-animation"></i></h6>
                     <span class="text-lilac font-alex text-xl">The Bride</span>
-                    <p class="mt-3 text-gray-500 text-sm leading-relaxed">Olivia fringilla dui at elit finibus viverra thenec a lacus seda themo the miss druane semper non the fermen.</p>
+                    <p class="mt-3 text-gray-500 text-sm leading-relaxed">Faith fringilla dui at elit finibus viverra thenec a lacus seda themo the miss druane semper non the fermen.</p>
                     <div class="flex justify-center sm:justify-start gap-2 mt-4">
                         <a href="#" class="w-8 h-8 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs"><i class="ti-facebook"></i></a>
                         <a href="#" class="w-8 h-8 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs"><i class="ti-twitter"></i></a>
@@ -69,12 +64,12 @@
             <!-- Groom -->
             <div class="flex flex-col sm:flex-row-reverse items-center bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-500" data-aos="fade-left" data-aos-delay="200">
                 <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-4 sm:mb-0 sm:ml-6 ring-4 ring-lilac/30 flex-shrink-0">
-                    <img src="{{ asset('assets/images/groom.jpg') }}" alt="Enrico" class="w-full h-full object-cover">
+                    <img src="{{ asset('assets/images/groom.jpg') }}" alt="Samuel" class="w-full h-full object-cover">
                 </div>
                 <div class="text-center sm:text-right">
-                    <h6 class="font-cormorant text-2xl mb-1">Enrico Danilo <i class="ti-heart text-lilac text-sm heart-animation"></i></h6>
+                    <h6 class="font-cormorant text-2xl mb-1">Samuel Ogechukwu <i class="ti-heart text-lilac text-sm heart-animation"></i></h6>
                     <span class="text-lilac font-alex text-xl">The Groom</span>
-                    <p class="mt-3 text-gray-500 text-sm leading-relaxed">Enrico fringilla dui at elit finibus viverra thenec a lacus seda themo the miss druane semper non the fermen.</p>
+                    <p class="mt-3 text-gray-500 text-sm leading-relaxed">Samuel fringilla dui at elit finibus viverra thenec a lacus seda themo the miss druane semper non the fermen.</p>
                     <div class="flex justify-center sm:justify-end gap-2 mt-4">
                         <a href="#" class="w-8 h-8 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs"><i class="ti-facebook"></i></a>
                         <a href="#" class="w-8 h-8 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs"><i class="ti-twitter"></i></a>
@@ -86,7 +81,7 @@
 
         <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
             <h3 class="font-alex text-4xl sm:text-5xl gradient-text mb-3">Are getting married!</h3>
-            <h4 class="font-cormorant text-lg sm:text-xl text-gray-600">December 15, 2026 — New York, Brooklyn</h4>
+            <h4 class="font-cormorant text-lg sm:text-xl text-gray-600">May 30, 2026 — Lagos, Nigeria</h4>
         </div>
     </div>
 </section>
@@ -118,7 +113,7 @@
         <div class="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div class="relative" data-aos="fade-right">
                 <div class="relative p-2 sm:p-4">
-                    <img src="https://picsum.photos/seed/weddingstory/600/700" alt="Our Story" class="rounded-2xl shadow-2xl w-full">
+                    <img src="{{ asset('assets/gallery/8.jpg') }}" alt="Our Story" class="rounded-2xl shadow-2xl w-full">
                     <div class="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-br from-royal-purple to-lilac rounded-full flex items-center justify-center animate-spin-slow shadow-lg">
                         <i class="ti-heart text-white text-xl sm:text-3xl"></i>
                     </div>
@@ -166,17 +161,6 @@
     </div>
 </section>
 
-<!-- See You -->
-<section id="seeyou" class="relative bg-cover bg-fixed bg-center py-16 sm:py-24" style="background-image: url('https://picsum.photos/seed/weddingbg2/1920/600')">
-    <div class="absolute inset-0 bg-gradient-to-t from-royal-purple/80 via-black/50 to-royal-purple/60"></div>
-    <div class="relative container mx-auto px-4 sm:px-6 text-center text-white">
-        <div data-aos="zoom-in">
-            <span class="block text-4xl sm:text-5xl mb-4"><i class="ti-heart heart-animation text-lilac"></i></span>
-            <h4 class="font-nunito text-lg sm:text-2xl mb-2 text-white/90">Looking forward to see you!</h4>
-            <h3 class="font-alex text-4xl sm:text-6xl">15.12.2026</h3>
-        </div>
-    </div>
-</section>
 <!-- Flipbook Modal -->
 <div id="flipbook-modal" class="fixed inset-0 z-[9999] hidden">
     <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="closeFlipbook()"></div>

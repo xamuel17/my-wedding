@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'RSVP - Olivia & Enrico Wedding')
+@section('title', 'RSVP - Faith & Samuel Wedding')
 
 @section('content')
 <!-- Hero -->
@@ -150,9 +150,9 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 @php
                     $details = [
-                        ['icon' => 'ti-heart', 'title' => 'Wedding Ceremony', 'items' => ['December 15, 2026', '12:00 PM – 1:00 PM', '175 Broadway, Brooklyn'], 'icons' => ['ti-calendar', 'ti-time', 'ti-location-pin']],
-                        ['icon' => 'ti-gift', 'title' => 'Wedding Reception', 'items' => ['December 15, 2026', '2:00 PM onwards', 'Fortune Brooklyn Restaurant'], 'icons' => ['ti-calendar', 'ti-time', 'ti-location-pin']],
-                        ['icon' => 'ti-home', 'title' => 'Accommodation', 'items' => ['The William Vale Hotel', '7 min from venue', 'Special rates available'], 'icons' => ['ti-direction-alt', 'ti-direction', 'ti-money']],
+                        ['icon' => 'ti-heart', 'title' => 'Wedding Ceremony', 'items' => ['May 30, 2026', '09:00 PM – 11:00 PM', '175 Broadway, Brooklyn'], 'icons' => ['ti-calendar', 'ti-time', 'ti-location-pin']],
+                        ['icon' => 'ti-gift', 'title' => 'Wedding Reception', 'items' => ['May 30, 2026', '12:00 PM onwards', 'Fortune Brooklyn Restaurant'], 'icons' => ['ti-calendar', 'ti-time', 'ti-location-pin']],
+                        // ['icon' => 'ti-home', 'title' => 'Accommodation', 'items' => ['The William Vale Hotel', '7 min from venue', 'Special rates available'], 'icons' => ['ti-direction-alt', 'ti-direction', 'ti-money']],
                     ];
                 @endphp
                 @foreach($details as $i => $detail)
@@ -183,7 +183,7 @@
             If you have any questions about the event, please don't hesitate to contact us.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="mailto:olivia.enrico.wedding@example.com" class="inline-flex items-center justify-center px-6 py-3 bg-royal-purple text-white rounded-xl hover:bg-royal-purple/90 transition-all duration-300 text-sm font-nunito">
+            <a href="mailto:unachukwu.samuel@gmail.com" class="inline-flex items-center justify-center px-6 py-3 bg-royal-purple text-white rounded-xl hover:bg-royal-purple/90 transition-all duration-300 text-sm font-nunito">
                 <i class="ti-email mr-2"></i> Email Us
             </a>
             <a href="tel:+1234567890" class="inline-flex items-center justify-center px-6 py-3 border-2 border-royal-purple text-royal-purple rounded-xl hover:bg-royal-purple hover:text-white transition-all duration-300 text-sm font-nunito">

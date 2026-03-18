@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Our Story - Olivia & Enrico Wedding'); ?>
+<?php $__env->startSection('title', 'Our Story - Faith & Samuel Wedding'); ?>
 
 <?php $__env->startSection('content'); ?>
 <!-- Hero -->
@@ -22,7 +22,7 @@
         <div class="grid md:grid-cols-2 gap-8 lg:gap-16 items-center mb-16 sm:mb-24">
             <div class="relative" data-aos="fade-right">
                 <div class="relative p-2 sm:p-4">
-                    <img src="https://picsum.photos/seed/ourstory/600/700" alt="Our Story" class="rounded-2xl shadow-2xl w-full">
+                    <img src="<?php echo e(asset('assets/gallery/10.jpg')); ?>" alt="Our Story" class="rounded-2xl shadow-2xl w-full">
                     <div class="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-br from-royal-purple to-lilac rounded-full flex items-center justify-center animate-spin-slow shadow-lg">
                         <i class="ti-heart text-white text-xl sm:text-3xl"></i>
                     </div>

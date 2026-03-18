@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Gallery - Olivia & Enrico Wedding'); ?>
+<?php $__env->startSection('title', 'Gallery - Faith & Samuel Wedding'); ?>
 
 <?php $__env->startSection('content'); ?>
 <!-- Gallery Hero -->

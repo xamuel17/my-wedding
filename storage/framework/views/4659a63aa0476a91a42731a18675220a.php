@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Wishes - Olivia & Enrico Wedding'); ?>
+<?php $__env->startSection('title', 'Wishes - Faith & Samuel Wedding'); ?>
 
 <?php $__env->startSection('content'); ?>
 <!-- Hero -->

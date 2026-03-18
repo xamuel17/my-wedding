@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Thank You - Olivia & Enrico Wedding'); ?>
+<?php $__env->startSection('title', 'Thank You - Faith & Samuel Wedding'); ?>
 
 <?php $__env->startSection('content'); ?>
 <div class="min-h-screen flex items-center justify-center py-12 sm:py-20 bg-gradient-to-br from-wedding-pink via-white to-wedding-pink">
@@ -43,7 +43,7 @@
                         Your generous gift means the world to us. It will help us build our dream life together.
                     </p>
                     <p class="text-gray-500 text-sm mb-2">With all our love and gratitude,</p>
-                    <p class="font-alex text-2xl sm:text-3xl gradient-text">Olivia & Enrico</p>
+                    <p class="font-alex text-2xl sm:text-3xl gradient-text">Faith & Samuel</p>
                 </div>
 
                 <div class="flex flex-col sm:flex-row gap-3 justify-center" data-aos="fade-up" data-aos-delay="400">
