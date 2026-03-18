@@ -233,7 +233,7 @@
                 <div class="w-12 h-px bg-lilac/60 mx-auto mb-4"></div>
                 <p class="text-xs text-gray-400 font-nunito leading-relaxed">
                     Faith & Samuel Wedding<br>
-                    Brooklyn, New York
+                    Lagos, Nigeria
                 </p>
                 <div class="flex justify-center gap-3 mt-3">
                     <a href="#" class="w-7 h-7 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs">

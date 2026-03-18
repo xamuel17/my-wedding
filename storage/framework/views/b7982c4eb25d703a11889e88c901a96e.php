@@ -62,12 +62,12 @@
             <!-- Groom -->
             <div class="flex flex-col sm:flex-row-reverse items-center bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-500" data-aos="fade-left" data-aos-delay="200">
                 <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-4 sm:mb-0 sm:ml-6 ring-4 ring-lilac/30 flex-shrink-0">
-                    <img src="<?php echo e(asset('assets/images/groom.jpg')); ?>" alt="Samuel" class="w-full h-full object-cover">
+                    <img src="<?php echo e(asset('assets/gallery/Samuel.jpeg')); ?>" alt="Samuel" class="w-full h-full object-cover">
                 </div>
                 <div class="text-center sm:text-right">
                     <h6 class="font-cormorant text-2xl mb-1">Samuel Ogechukwu <i class="ti-heart text-lilac text-sm heart-animation"></i></h6>
                     <span class="text-lilac font-alex text-xl">The Groom</span>
-                    <p class="mt-3 text-gray-500 text-sm leading-relaxed">Samuel fringilla dui at elit finibus viverra thenec a lacus seda themo the miss druane semper non the fermen.</p>
+                    <p class="mt-3 text-gray-500 text-sm leading-relaxed">Meet the man of the hour, Samuel Ogechukwu. With a smile that lights up the room and a heart big enough to match, Samuel is the steady anchor in this love story.</p>
                     <div class="flex justify-center sm:justify-end gap-2 mt-4">
                         <a href="#" class="w-8 h-8 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs"><i class="ti-facebook"></i></a>
                         <a href="#" class="w-8 h-8 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs"><i class="ti-twitter"></i></a>
@@ -120,11 +120,13 @@
             <div data-aos="fade-left" data-aos-delay="200">
                 <span class="font-alex text-2xl sm:text-3xl text-lilac block mb-2">Our love.</span>
                 <h3 class="font-cormorant text-3xl sm:text-4xl mb-6">Our Story</h3>
-                <p class="text-gray-500 mb-4 leading-relaxed">Curabit aliquet orci elit genes tristique lorem commodo vitae. Tuliaum tincidunt nete sede gravida aliquam, neque libero hendrerit magna, sit amet mollis lacus ithe maurise.</p>
-                <p class="text-gray-500 mb-6 leading-relaxed">Luality fringilla duiman at elit vinibus viverra nec a lacus themo the druanye sene sollicitudin mi suscipit non sagie the fermen.</p>
+                <p class="text-gray-500 mb-4 leading-relaxed">Faith and Samuel’s story began in the most ordinary place, a public bus on a day that seemed just like any other. What started as a simple conversation between strangers quickly grew into a genuine friendship, built on laughter, shared moments, and an easy connection.Over time, that friendship blossomed into love.
+
+<p class="text-gray-500 mb-6 leading-relaxed">Life brought them even closer when they became colleagues in the same office, sharing not just workspaces but dreams, ideas, and daily experiences. And even when Faith moved on to a new opportunity, their bond only grew stronger.</p>
+
                 <div class="flex items-center gap-3 mb-6">
                     <div class="w-10 h-px bg-royal-purple"></div>
-                    <h4 class="font-cormorant text-lg text-royal-purple">Dec 5th, 2026, We Said Yes!</h4>
+                    <h4 class="font-cormorant text-lg text-royal-purple">April 5th, 2025, We Said Yes!</h4>
                 </div>
                 <a href="<?php echo e(route('story')); ?>" class="wedding-button">Read Our Full Story</a>
             </div>

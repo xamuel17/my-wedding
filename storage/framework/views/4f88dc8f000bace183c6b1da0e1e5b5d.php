@@ -31,12 +31,18 @@
             <div data-aos="fade-left" data-aos-delay="200">
                 <span class="font-alex text-2xl sm:text-3xl text-lilac block mb-2">Our love.</span>
                 <h3 class="font-cormorant text-3xl sm:text-4xl mb-6">How It All Began</h3>
-                <p class="text-gray-500 mb-4 leading-relaxed">Curabit aliquet orci elit genes tristique lorem commodo vitae. Tuliaum tincidunt nete sede gravida aliquam, neque libero hendrerit magna, sit amet mollis lacus ithe maurise.</p>
-                <p class="text-gray-500 mb-4 leading-relaxed">Luality fringilla duiman at elit vinibus viverra nec a lacus themo the druanye sene sollicitudin mi suscipit non sagie the fermen.</p>
-                <p class="text-gray-500 mb-6 leading-relaxed">Phasellus viverra tristique justo duis vitae diam neque nivamus ac est augue artine aringilla dui at elit finibus viverra nec a lacus.</p>
+                                <p class="text-gray-500 mb-4 leading-relaxed">Faith and Samuel’s story began in the most ordinary place, a public bus on a day that seemed just like any other. What started as a simple conversation between strangers quickly grew into a genuine friendship, built on laughter, shared moments, and an easy connection.Over time, that friendship blossomed into love.
+
+<p class="text-gray-500 mb-6 leading-relaxed">Life brought them even closer when they became colleagues in the same office, sharing not just workspaces but dreams, ideas, and daily experiences. And even when Faith moved on to a new opportunity, their bond only grew stronger.</p>
+
+
+    <p class="text-gray-500 mb-4 leading-relaxed">At the heart of their love is a shared vision to build a life of purpose, self-sustainability, and financial freedom. Together, they are not just partners in love, but partners in ambition, working hand in hand to create a future, a business, and a life they truly believe in.</p>
+
+    <p class="text-gray-500 mb-6 leading-relaxed">Today, they stand not only as lovers, but as best friends and builders of a shared dream choosing each other, every step of the way.</p>
+
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-px bg-royal-purple"></div>
-                    <h4 class="font-cormorant text-lg text-royal-purple">Dec 5th, 2026, We Said Yes!</h4>
+                    <h4 class="font-cormorant text-lg text-royal-purple">Apirl 5th, 2025, We Said Yes!</h4>
                 </div>
             </div>
         </div>
