@@ -28,7 +28,7 @@
                             </div>
                             <div class="flex justify-between items-center py-2 border-b border-gray-100">
                                 <span class="font-nunito text-gray-500 text-sm">Amount:</span>
-                                <span class="font-nunito font-bold text-royal-purple text-xl">${{ number_format($donation['amount'], 2) }}</span>
+                                <span class="font-nunito font-bold text-royal-purple text-xl">₦{{ number_format($donation['amount'], 2) }}</span>
                             </div>
                             @if($donation['message'])
                                 <div class="py-2">

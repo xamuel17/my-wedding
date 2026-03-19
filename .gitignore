@@ -4,6 +4,7 @@
 /public/storage
 /public/assets
 /storage/*.key
+/storage/app/public/wishes
 /vendor
 .env
 .env.backup

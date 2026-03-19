@@ -48,7 +48,7 @@
 
                         @if($wish->video_path)
                             <div class="mt-3 relative rounded-xl overflow-hidden bg-black">
-                                <video class="w-full max-h-48" controls preload="metadata">
+                                <video class="w-full max-h-80" controls preload="metadata">
                                     <source src="{{ asset('storage/' . $wish->video_path) }}" type="video/mp4">
                                 </video>
                                 <div class="absolute top-2 right-2 bg-royal-purple/80 text-white px-2 py-0.5 rounded-full text-[10px] backdrop-blur-sm">

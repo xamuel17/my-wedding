@@ -64,7 +64,7 @@ unset($__errorArgs, $__bag); ?>
                         <div class="w-14 h-14 bg-royal-purple/10 rounded-2xl flex items-center justify-center mx-auto mb-3">
                             <i class="ti-video-camera text-xl text-royal-purple"></i>
                         </div>
-                        <p class="text-gray-500 text-sm mb-1">Record a video message (max 100MB)</p>
+                        <p class="text-gray-500 text-sm mb-1">Record a video message (max 10MB)</p>
                         <p class="text-xs text-gray-400 mb-4">MP4, MOV, AVI, WMV formats supported</p>
                         <input type="file" id="video" name="video" accept="video/mp4,video/mov,video/avi,video/wmv" class="hidden">
                         <button type="button" onclick="document.getElementById('video').click()" class="inline-flex items-center px-5 py-2.5 bg-royal-purple/10 text-royal-purple rounded-xl hover:bg-royal-purple hover:text-white transition-all duration-300 text-sm font-nunito font-semibold">
@@ -83,8 +83,8 @@ unset($__errorArgs, $__bag); ?>
                 </div>
 
                 <div class="text-center">
-                    <button type="submit" class="wedding-button inline-flex items-center justify-center px-8 py-4">
-                        <i class="ti-heart mr-2"></i> Send My Wishes
+                    <button type="submit" id="wish-submit-btn" class="wedding-button inline-flex items-center justify-center px-8 py-4">
+                        <i class="ti-heart mr-2"></i> <span id="btn-text">Send My Wishes</span>
                     </button>
                 </div>
             </form>
@@ -128,6 +128,17 @@ document.getElementById('video').addEventListener('change', function() {
         info.classList.remove('hidden');
         info.textContent = this.files[0].name + ' (' + (this.files[0].size / 1048576).toFixed(1) + ' MB)';
     }
+});
+
+// Form submission loading state
+document.querySelector('form').addEventListener('submit', function() {
+    var submitBtn = document.getElementById('wish-submit-btn');
+    var btnText = document.getElementById('btn-text');
+    
+    // Disable button and show loading
+    submitBtn.disabled = true;
+    btnText.innerHTML = '<i class="ti-loader ti-spin mr-2"></i> Sending...';
+    submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
 });
 </script>
 <?php $__env->stopSection(); ?>

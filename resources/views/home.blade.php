@@ -47,12 +47,12 @@
             <!-- Bride -->
             <div class="flex flex-col sm:flex-row items-center bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-500" data-aos="fade-right" data-aos-delay="100">
                 <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-4 sm:mb-0 sm:mr-6 ring-4 ring-lilac/30 flex-shrink-0">
-                    <img src="{{ asset('assets/images/bride.jpg') }}" alt="Faith" class="w-full h-full object-cover">
+                    <img src="{{ asset('assets/gallery/Faith.jpeg') }}" alt="Faith" class="w-full h-full object-cover">
                 </div>
                 <div class="text-center sm:text-left">
                     <h6 class="font-cormorant text-2xl mb-1">Faith Michael <i class="ti-heart text-lilac text-sm heart-animation"></i></h6>
                     <span class="text-lilac font-alex text-xl">The Bride</span>
-                    <p class="mt-3 text-gray-500 text-sm leading-relaxed">Faith fringilla dui at elit finibus viverra thenec a lacus seda themo the miss druane semper non the fermen.</p>
+                    <p class="mt-3 text-gray-500 text-sm leading-relaxed">Hi, I’m Faith. Lover of soft moments, deep belly laughter, and happily ever afters. I found my forever in Samuel, and now I’m counting down to a lifetime of love, joy, and inside jokes.</p>
                     <div class="flex justify-center sm:justify-start gap-2 mt-4">
                         <a href="#" class="w-8 h-8 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs"><i class="ti-facebook"></i></a>
                         <a href="#" class="w-8 h-8 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs"><i class="ti-twitter"></i></a>
@@ -122,10 +122,8 @@
             <div data-aos="fade-left" data-aos-delay="200">
                 <span class="font-alex text-2xl sm:text-3xl text-lilac block mb-2">Our love.</span>
                 <h3 class="font-cormorant text-3xl sm:text-4xl mb-6">Our Story</h3>
-                <p class="text-gray-500 mb-4 leading-relaxed">Faith and Samuel’s story began in the most ordinary place, a public bus on a day that seemed just like any other. What started as a simple conversation between strangers quickly grew into a genuine friendship, built on laughter, shared moments, and an easy connection.Over time, that friendship blossomed into love.
-
-<p class="text-gray-500 mb-6 leading-relaxed">Life brought them even closer when they became colleagues in the same office, sharing not just workspaces but dreams, ideas, and daily experiences. And even when Faith moved on to a new opportunity, their bond only grew stronger.</p>
-
+                <p class="text-gray-500 mb-4 leading-relaxed">Faith and Samuel’s story began in the most ordinary place. What started as a simple conversation between strangers quickly grew into a genuine friendship, built on laughter, shared moments, and an easy connection.Over time, that friendship blossomed into love.
+                <p class="text-gray-500 mb-6 leading-relaxed">Life brought us even closer when we became colleagues in the same office, sharing not just workspaces but dreams, ideas, and daily experiences. Even when Faith moved on to a new opportunity, our bond only grew stronger.</p>
                 <div class="flex items-center gap-3 mb-6">
                     <div class="w-10 h-px bg-royal-purple"></div>
                     <h4 class="font-cormorant text-lg text-royal-purple">April 5th, 2025, We Said Yes!</h4>

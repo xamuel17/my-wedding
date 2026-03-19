@@ -26,21 +26,21 @@
                 <div class="space-y-4">
                     <div class="flex justify-between items-center py-3 border-b border-gray-100">
                         <span class="font-nunito font-semibold text-gray-600 text-sm">Bank:</span>
-                        <span class="font-nunito text-gray-900 font-medium">Zenith Bank</span>
+                        <span class="font-nunito text-gray-900 font-medium">Providus Bank</span>
                     </div>
                     <div class="flex justify-between items-center py-3 border-b border-gray-100">
                         <span class="font-nunito font-semibold text-gray-600 text-sm">Account Name:</span>
-                        <span class="font-nunito text-gray-900 font-medium">Faith & Samuel Wedding</span>
+                        <span class="font-nunito text-gray-900 font-medium">Unachukwu Samuel Ogechukwu</span>
                     </div>
                     <div class="flex justify-between items-center py-3 border-b border-gray-100">
                         <span class="font-nunito font-semibold text-gray-600 text-sm">Account Number:</span>
-                        <span class="font-nunito text-royal-purple font-bold text-lg tracking-wider">9876543210</span>
+                        <span class="font-nunito text-royal-purple font-bold text-lg tracking-wider">6507794507</span>
                     </div>
                 </div>
                 <div class="mt-6 p-4 bg-royal-purple/5 rounded-xl">
                     <p class="text-sm text-gray-500 text-center">
                         <i class="ti-info-alt text-royal-purple mr-1"></i>
-                        Please use your name as the reference when making the transfer
+                        Please use your name as the narration when making the transfer
                     </p>
                 </div>
             </div>
@@ -72,7 +72,7 @@ unset($__errorArgs, $__bag); ?>
                 </div>
 
                 <div class="mb-5">
-                    <label for="amount" class="block font-nunito font-semibold text-gray-700 mb-2 text-sm">Amount Donated ($) <span class="text-red-400">*</span></label>
+                    <label for="amount" class="block font-nunito font-semibold text-gray-700 mb-2 text-sm">Amount Donated (₦) <span class="text-red-400">*</span></label>
                     <input type="number" id="amount" name="amount" required min="1" step="0.01" value="<?php echo e(old('amount')); ?>" class="w-full wedding-form-input" placeholder="100.00">
                     <?php $__errorArgs = ['amount'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');

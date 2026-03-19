@@ -31,18 +31,18 @@
             <div data-aos="fade-left" data-aos-delay="200">
                 <span class="font-alex text-2xl sm:text-3xl text-lilac block mb-2">Our love.</span>
                 <h3 class="font-cormorant text-3xl sm:text-4xl mb-6">How It All Began</h3>
-                                <p class="text-gray-500 mb-4 leading-relaxed">Faith and Samuel’s story began in the most ordinary place, a public bus on a day that seemed just like any other. What started as a simple conversation between strangers quickly grew into a genuine friendship, built on laughter, shared moments, and an easy connection.Over time, that friendship blossomed into love.
+                                <p class="text-gray-500 mb-4 leading-relaxed">Faith and Samuel’s story began in the most ordinary place. What started as a simple conversation between strangers quickly grew into a genuine friendship, built on laughter, shared moments, and an easy connection.Over time, that friendship blossomed into love.
 
-<p class="text-gray-500 mb-6 leading-relaxed">Life brought them even closer when they became colleagues in the same office, sharing not just workspaces but dreams, ideas, and daily experiences. And even when Faith moved on to a new opportunity, their bond only grew stronger.</p>
+<p class="text-gray-500 mb-6 leading-relaxed">Life brought us even closer when we became colleagues in the same office, sharing not just workspaces but dreams, ideas, and daily experiences. Even when Faith moved on to a new opportunity, our bond only grew stronger.</p>
 
 
-    <p class="text-gray-500 mb-4 leading-relaxed">At the heart of their love is a shared vision to build a life of purpose, self-sustainability, and financial freedom. Together, they are not just partners in love, but partners in ambition, working hand in hand to create a future, a business, and a life they truly believe in.</p>
+    <p class="text-gray-500 mb-4 leading-relaxed">At the heart of our love is a shared vision to build a life of purpose, self-sustainability, and financial freedom. Together, we are not just partners in love, but partners in ambition, working hand in hand to create a future, a business, and a life we truly believe in.</p>
 
-    <p class="text-gray-500 mb-6 leading-relaxed">Today, they stand not only as lovers, but as best friends and builders of a shared dream choosing each other, every step of the way.</p>
+    <p class="text-gray-500 mb-6 leading-relaxed">Today, we stand not only as lovers, but as best friends and builders of a shared dream choosing each other, every step of the way.</p>
 
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-px bg-royal-purple"></div>
-                    <h4 class="font-cormorant text-lg text-royal-purple">Apirl 5th, 2025, We Said Yes!</h4>
+                    <h4 class="font-cormorant text-lg text-royal-purple">October 2nd, 2025, We Said Yes!</h4>
                 </div>
             </div>
         </div>
@@ -56,11 +56,11 @@
 
             <?php
                 $events = [
-                    ['icon' => 'ti-heart', 'title' => 'First Meeting', 'date' => 'Spring 2024', 'text' => 'The day our eyes first met across a crowded room, and everything changed forever.', 'highlight' => false],
-                    ['icon' => 'ti-star', 'title' => 'First Date', 'date' => 'Summer 2024', 'text' => 'A perfect evening filled with laughter, conversation, and the beginning of something beautiful.', 'highlight' => false],
-                    ['icon' => 'ti-heart', 'title' => 'Falling in Love', 'date' => 'Autumn 2024', 'text' => 'Seasons changed, and so did our hearts. We knew this was forever.', 'highlight' => false],
-                    ['icon' => 'ti-medall', 'title' => 'The Proposal', 'date' => 'December 5th, 2026', 'text' => 'On one knee, with tears of joy, I asked the question that would change our lives forever.', 'highlight' => true],
-                    ['icon' => 'ti-home', 'title' => 'The Wedding', 'date' => 'December 15th, 2026', 'text' => 'The day we say "I do" and begin our forever together. Join us as we start this new chapter!', 'highlight' => true],
+                    ['icon' => 'ti-heart', 'title' => 'First Meeting', 'date' => '27th June, 2023', 'text' => 'The day our eyes first met across a crowded room, and everything changed forever.', 'highlight' => false],
+                    ['icon' => 'ti-star', 'title' => 'First Date', 'date' => '2nd August, 2023', 'text' => 'A perfect evening filled with laughter, conversation, and the beginning of something beautiful.', 'highlight' => false],
+                    ['icon' => 'ti-heart', 'title' => 'Falling in Love', 'date' => '3rd September, 2023', 'text' => 'Seasons changed, and so did our hearts. We knew this was forever.', 'highlight' => false],
+                    ['icon' => 'ti-medall', 'title' => 'The Proposal', 'date' => '2nd October, 2025', 'text' => 'On one knee, with tears of joy, I asked the question that would change our lives forever.', 'highlight' => true],
+                    ['icon' => 'ti-home', 'title' => 'The Wedding', 'date' => '30th May, 2026', 'text' => 'The day we say "I do" and begin our forever together. Join us as we start this new chapter!', 'highlight' => true],
                 ];
             ?>
 
