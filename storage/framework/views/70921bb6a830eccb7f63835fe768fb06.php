@@ -53,28 +53,38 @@
             <div class="gallery-masonry" id="wedding-gallery">
                 <?php $__currentLoopData = $galleryItems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <?php if($item['type'] === 'image'): ?>
-                    <div class="gallery-item gallery-image group"
+                    <div class="gallery-item gallery-image group loading"
                          data-type="image"
                          data-src="<?php echo $item['src']; ?>"
                          data-sub-html="<h4 class='font-cormorant'><?php echo e($item['caption']); ?></h4>"
                          data-aos="fade-up"
                          data-aos-delay="<?php echo e(($index % 5) * 80); ?>">
+                        <!-- Shimmer wrapper -->
+                        <div class="shimmer-wrapper"></div>
                         <img src="<?php echo e($item['thumb']); ?>"
                              alt="<?php echo e($item['caption']); ?>"
                              class="w-full h-auto"
-                             loading="lazy">
+                             loading="lazy"
+                             onload="console.log('Image loaded:', this.src); window.handleMediaLoad(this.closest('.gallery-item'))"
+                             onerror="console.log('Image error:', this.src); window.handleMediaError(this.closest('.gallery-item'))">
                     <?php else: ?>
-                    <div class="gallery-item group"
+                    <div class="gallery-item group loading"
                          data-type="video"
                          data-video-src="<?php echo $item['src']; ?>"
-                         onclick="openVideoModal(this.dataset.videoSrc)"
                          data-aos="fade-up"
                          data-aos-delay="<?php echo e(($index % 5) * 80); ?>">
-                        <video class="w-full h-auto" muted preload="metadata">
+                        <!-- Shimmer wrapper -->
+                        <div class="shimmer-wrapper"></div>
+                        <video class="w-full h-auto" 
+                               muted 
+                               preload="metadata"
+                               onloadeddata="window.handleMediaLoad(this.closest('.gallery-item'))"
+                               onerror="window.handleMediaError(this.closest('.gallery-item'))">
                             <source src="<?php echo $item['src']; ?>" type="video/mp4">
                         </video>
                         <!-- Video play overlay -->
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-all duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-all duration-500"
+                             onclick="openVideoModal(this.closest('.gallery-item').dataset.videoSrc)">
                             <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
                                 <i class="ti-control-play text-2xl ml-1" style="color: #4B0082;"></i>
                             </div>
@@ -167,7 +177,89 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('scripts'); ?>
+<style>
+/* Shimmer loading effect */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item.loading .shimmer-wrapper {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    z-index: 1;
+    min-height: 200px;
+    border-radius: 0.5rem;
+    display: none; /* Temporarily disable shimmer */
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.gallery-item.loaded .shimmer-wrapper {
+    display: none;
+}
+
+.gallery-item.loading img,
+.gallery-item.loading video {
+    opacity: 1;
+}
+
+.gallery-item.loaded img,
+.gallery-item.loaded video {
+    opacity: 1;
+}
+</style>
 <script>
+// Make functions globally available
+window.handleMediaLoad = function(galleryItem) {
+    console.log('Media loaded:', galleryItem);
+    if (galleryItem) {
+        galleryItem.classList.remove('loading');
+        galleryItem.classList.add('loaded');
+    }
+};
+
+window.handleMediaError = function(galleryItem) {
+    console.log('Media error:', galleryItem);
+    if (galleryItem) {
+        galleryItem.classList.remove('loading');
+        galleryItem.classList.add('loaded');
+        // Optionally add an error state
+        galleryItem.classList.add('error');
+    }
+};
+
+// Initialize existing media that might already be loaded
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Checking for already loaded media...');
+    // Check for already loaded images and videos
+    document.querySelectorAll('.gallery-item img, .gallery-item video').forEach(function(media) {
+        console.log('Found media:', media);
+        if (media.complete && media.naturalHeight !== 0) {
+            console.log('Image already loaded');
+            window.handleMediaLoad(media.closest('.gallery-item'));
+        } else if (media.readyState >= 2) { // For video
+            console.log('Video already loaded');
+            window.handleMediaLoad(media.closest('.gallery-item'));
+        } else {
+            console.log('Media not yet loaded, will show shimmer');
+            // Add fallback timeout in case onload doesn't fire
+            setTimeout(function() {
+                if (media.closest('.gallery-item').classList.contains('loading')) {
+                    console.log('Fallback: Force showing media');
+                    window.handleMediaLoad(media.closest('.gallery-item'));
+                }
+            }, 3000); // 3 second fallback
+        }
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const el = document.getElementById('wedding-gallery');
     if (el && typeof lightGallery !== 'undefined') {
@@ -221,7 +313,7 @@ function filterGallery(type) {
         window.lgInstance.refresh();
     }
 }
-</script>
+</style>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\wedding-site\resources\views/gallery.blade.php ENDPATH**/ ?>
