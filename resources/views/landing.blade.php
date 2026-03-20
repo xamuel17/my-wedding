@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeddingBliss.ng — Pink & Dark Pink Wedding Websites</title>
+    <title>WeddingBliss.ng</title>
     <meta name="description" content="Elegant wedding invitation websites, galleries, and RSVP systems — now in beautiful pink and dark pink tones.">
 
     <!-- Google Fonts -->

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Gallery - Faith & Samuel Wedding')
+@section('title', 'Gallery - Faith & Samuel — Together Forever')
 
 @section('content')
 <!-- Gallery Hero -->

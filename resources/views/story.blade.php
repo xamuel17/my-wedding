@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Our Story - Faith & Samuel Wedding')
+@section('title', 'Our Story - Faith & Samuel — Together Forever')
 
 @section('content')
 <!-- Hero -->

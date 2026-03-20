@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Home - Faith & Samuel Wedding')
+@section('title', 'Home - Faith & Samuel — Together Forever')
 
 @section('content')
 <!-- Header Video -->

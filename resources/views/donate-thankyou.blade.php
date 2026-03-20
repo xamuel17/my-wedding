@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Thank You - Faith & Samuel Wedding')
+@section('title', 'Thank You - Faith & Samuel — Together Forever')
 
 @section('content')
 <div class="min-h-screen flex items-center justify-center py-12 sm:py-20 bg-gradient-to-br from-wedding-pink via-white to-wedding-pink">

@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Our Story - Faith & Samuel Wedding'); ?>
+<?php $__env->startSection('title', 'Our Story - Faith & Samuel — Together Forever'); ?>
 
 <?php $__env->startSection('content'); ?>
 <!-- Hero -->

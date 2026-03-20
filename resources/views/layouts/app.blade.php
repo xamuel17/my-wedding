@@ -3,14 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Faith & Samuel Wedding')</title>
+    <title>@yield('title', 'Faith & Samuel — Together Forever')</title>
     <meta name="description" content="Faith & Samuel – Wedding Website">
+
+    {{-- ===================== Primary Meta ===================== --}}
+    <title>@yield('title', 'Faith & Samuel — Together Forever')</title>
+    <meta name="description" content="@yield('description', 'Join us as we celebrate the wedding of Faith & Samuel. Save the date and follow along as we begin our forever.')">
+    <meta name="author" content="Faith & Samuel">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    {{-- ===================== Open Graph (Facebook, WhatsApp, LinkedIn) ===================== --}}
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="{{ url()->current() }}">
+    <meta property="og:site_name"   content="Faith & Samuel — Together Forever">
+    <meta property="og:title"       content="@yield('og_title', 'Faith & Samuel — Together Forever')">
+    <meta property="og:description" content="@yield('og_description', 'We\'re getting married! Join us to celebrate our love story. Save the date and celebrate with us.')">
+    <meta property="og:image"       content="@yield('og_image', asset('gallery/1.jpg'))">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"   content="Faith & Samuel — Together Forever">
+    <meta property="og:locale"      content="en_US">
+
+    {{-- ===================== Twitter / X Card ===================== --}}
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="@yield('twitter_title', 'Faith & Samuel — Together Forever')">
+    <meta name="twitter:description" content="@yield('twitter_description', 'We\'re getting married! Join us to celebrate our love story. Save the date and celebrate with us.')">
+    <meta name="twitter:image"       content="@yield('twitter_image', asset('gallery/1.jpg'))">
+    <meta name="twitter:image:alt"   content="Faith & Samuel — Together Forever">
+
+    {{-- ===================== WhatsApp / iMessage Rich Preview ===================== --}}
+    {{-- These re-use OG tags above — WhatsApp reads og:image, og:title, og:description --}}
+
+    {{-- ===================== Favicon ===================== --}}
+    <link rel="icon"             type="image/png" sizes="32x32" href="{{ asset('favicon.ico') }}">
+    <link rel="icon"             type="image/png" sizes="16x16" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180"                href="{{ asset('favicon.ico') }}">
+    <meta name="theme-color" content="#b08b6e">
+
+
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
+        {{-- ===================== Schema.org (Google Rich Results) ===================== --}}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Faith & Samuel — Together Forever",
+        "description": "The wedding celebration of Faith and Samuel.",
+        "startDate": "YYYY-MM-DD",
+        "endDate": "YYYY-MM-DD",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+            "@type": "Place",
+            "name": "Venue Name",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "123 Venue Street",
+                "addressLocality": "City",
+                "addressRegion": "State",
+                "postalCode": "00000",
+                "addressCountry": "US"
+            }
+        },
+        "image": "{{ asset('gallery/1.jpg') }}",
+        "url": "{{ url('/') }}"
+    }
+    </script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -231,7 +295,7 @@
             <div class="p-6 text-center">
                 <div class="w-12 h-px bg-lilac/60 mx-auto mb-4"></div>
                 <p class="text-xs text-gray-400 font-nunito leading-relaxed">
-                    Faith & Samuel Wedding<br>
+                    Faith & Samuel — Together Forever<br>
                     Lagos, Nigeria
                 </p>
                 <div class="flex justify-center gap-3 mt-3">

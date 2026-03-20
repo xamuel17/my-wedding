@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Home - Faith & Samuel Wedding'); ?>
+<?php $__env->startSection('title', 'Home - Faith & Samuel — Together Forever'); ?>
 
 <?php $__env->startSection('content'); ?>
 <!-- Header Video -->

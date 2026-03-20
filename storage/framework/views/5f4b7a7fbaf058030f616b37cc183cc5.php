@@ -3,14 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $__env->yieldContent('title', 'Faith & Samuel Wedding'); ?></title>
+    <title><?php echo $__env->yieldContent('title', 'Faith & Samuel — Together Forever'); ?></title>
     <meta name="description" content="Faith & Samuel – Wedding Website">
+
+    
+    <title><?php echo $__env->yieldContent('title', 'Faith & Samuel — Together Forever'); ?></title>
+    <meta name="description" content="<?php echo $__env->yieldContent('description', 'Join us as we celebrate the wedding of Faith & Samuel. Save the date and follow along as we begin our forever.'); ?>">
+    <meta name="author" content="Faith & Samuel">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="<?php echo e(url()->current()); ?>">
+
+    
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="<?php echo e(url()->current()); ?>">
+    <meta property="og:site_name"   content="Faith & Samuel — Together Forever">
+    <meta property="og:title"       content="<?php echo $__env->yieldContent('og_title', 'Faith & Samuel — Together Forever'); ?>">
+    <meta property="og:description" content="<?php echo $__env->yieldContent('og_description', 'We\'re getting married! Join us to celebrate our love story. Save the date and celebrate with us.'); ?>">
+    <meta property="og:image"       content="<?php echo $__env->yieldContent('og_image', asset('gallery/1.jpg')); ?>">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"   content="Faith & Samuel — Together Forever">
+    <meta property="og:locale"      content="en_US">
+
+    
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="<?php echo $__env->yieldContent('twitter_title', 'Faith & Samuel — Together Forever'); ?>">
+    <meta name="twitter:description" content="<?php echo $__env->yieldContent('twitter_description', 'We\'re getting married! Join us to celebrate our love story. Save the date and celebrate with us.'); ?>">
+    <meta name="twitter:image"       content="<?php echo $__env->yieldContent('twitter_image', asset('gallery/1.jpg')); ?>">
+    <meta name="twitter:image:alt"   content="Faith & Samuel — Together Forever">
+
+    
+    
+
+    
+    <link rel="icon"             type="image/png" sizes="32x32" href="<?php echo e(asset('favicon.ico')); ?>">
+    <link rel="icon"             type="image/png" sizes="16x16" href="<?php echo e(asset('favicon.ico')); ?>">
+    <link rel="apple-touch-icon" sizes="180x180"                href="<?php echo e(asset('favicon.ico')); ?>">
+    <meta name="theme-color" content="#b08b6e">
+
+
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
+        
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Faith & Samuel — Together Forever",
+        "description": "The wedding celebration of Faith and Samuel.",
+        "startDate": "YYYY-MM-DD",
+        "endDate": "YYYY-MM-DD",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+            "@type": "Place",
+            "name": "Venue Name",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "123 Venue Street",
+                "addressLocality": "City",
+                "addressRegion": "State",
+                "postalCode": "00000",
+                "addressCountry": "US"
+            }
+        },
+        "image": "<?php echo e(asset('gallery/1.jpg')); ?>",
+        "url": "<?php echo e(url('/')); ?>"
+    }
+    </script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -42,7 +106,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('assets/favicon.ico') }}">
+    <link rel="icon" type="image/png" href="<?php echo e(asset('assets/favicon.ico')); ?>">
 
     <!-- Custom Styles -->
     <style>
@@ -232,7 +296,7 @@
             <div class="p-6 text-center">
                 <div class="w-12 h-px bg-lilac/60 mx-auto mb-4"></div>
                 <p class="text-xs text-gray-400 font-nunito leading-relaxed">
-                    Faith & Samuel Wedding<br>
+                    Faith & Samuel — Together Forever<br>
                     Lagos, Nigeria
                 </p>
                 <div class="flex justify-center gap-3 mt-3">
