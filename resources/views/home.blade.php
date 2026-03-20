@@ -200,7 +200,7 @@
         </div>
     </div>
 </section>
-
+<br/><br/>
 <!-- Countdown -->
 <section id="countdown" class="relative bg-cover bg-fixed bg-center py-16 sm:py-24" style="background-image: url('https://picsum.photos/seed/weddingbg1/1920/800')">
     <div class="absolute inset-0 bg-gradient-to-r from-royal-purple/80 to-lilac/60"></div>

@@ -103,7 +103,7 @@
             ['emoji' => '👨‍💼', 'fact' => 'Faith and work are 5&6, every other person is probably a \'learner\''],
             ['emoji' => '👗', 'fact' => 'Faith could wear a Shirt and Jeans 24/7, 365!'],
             ['emoji' => '😴', 'fact' => 'If sleep were a sport, Faith would be a Pro!'],
-            ['emoji' => '🙏', 'fact' => 'She’s my answered prayer. Now I don’t just live by Faith, I’m married to her!'],
+            ['emoji' => '🙏', 'fact' => 'She’s my answered prayer. Now I don’t just live by Faith, I will be married to her!'],
         ];
 
         $groomFacts = [
@@ -194,7 +194,7 @@
         </div>
     </div>
 </section>
-
+<br/><br/>
 <!-- Countdown -->
 <section id="countdown" class="relative bg-cover bg-fixed bg-center py-16 sm:py-24" style="background-image: url('https://picsum.photos/seed/weddingbg1/1920/800')">
     <div class="absolute inset-0 bg-gradient-to-r from-royal-purple/80 to-lilac/60"></div>

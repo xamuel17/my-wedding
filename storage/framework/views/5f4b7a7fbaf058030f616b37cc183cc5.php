@@ -236,15 +236,7 @@
                     Lagos, Nigeria
                 </p>
                 <div class="flex justify-center gap-3 mt-3">
-                    <a href="#" class="w-7 h-7 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs">
-                        <i class="ti-facebook"></i>
-                    </a>
-                    <a href="#" class="w-7 h-7 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs">
-                        <i class="ti-instagram"></i>
-                    </a>
-                    <a href="#" class="w-7 h-7 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs">
-                        <i class="ti-twitter"></i>
-                    </a>
+                    
                 </div>
             </div>
         </aside>

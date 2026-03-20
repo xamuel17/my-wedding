@@ -6,8 +6,13 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\DonateController;
 use App\Http\Controllers\RsvpController;
 
-// Home page
+// Landing page (WeddingBliss.ng)
 Route::get('/', function () {
+    return view('landing');
+})->name('landing');
+
+// Home page (Faith & Samuel wedding)
+Route::get('/sfaffair', function () {
     return view('home');
 })->name('home');
 
