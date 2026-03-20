@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/favicon.ico') }}">
 
     <!-- Custom Styles -->
     <style>
