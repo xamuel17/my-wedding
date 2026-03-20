@@ -250,7 +250,7 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 lg:ml-[22%] min-h-screen">
+        <main class="flex-1 lg:ml-[22%] min-h-screen overflow-x-hidden">
             <div class="page-content">
                 <?php echo $__env->yieldContent('content'); ?>
             </div>

@@ -235,7 +235,7 @@
                     Lagos, Nigeria
                 </p>
                 <div class="flex justify-center gap-3 mt-3">
-                    <a href="#" class="w-7 h-7 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs">
+                    {{-- <a href="#" class="w-7 h-7 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs">
                         <i class="ti-facebook"></i>
                     </a>
                     <a href="#" class="w-7 h-7 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs">
@@ -243,13 +243,13 @@
                     </a>
                     <a href="#" class="w-7 h-7 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs">
                         <i class="ti-twitter"></i>
-                    </a>
+                    </a> --}}
                 </div>
             </div>
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 lg:ml-[22%] min-h-screen">
+        <main class="flex-1 lg:ml-[22%] min-h-screen overflow-x-hidden">
             <div class="page-content">
                 @yield('content')
             </div>
