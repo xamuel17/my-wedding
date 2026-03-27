@@ -103,22 +103,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Gallery Lightbox Styles */
-.lg-backdrop {
-    background: rgba(75, 0, 130, 0.9) !important;
-}
-
-.lg-toolbar {
-    background: rgba(75, 0, 130, 0.8) !important;
-}
-
-.lg-icon {
-    color: #C8A2C8 !important;
-}
-
-.lg-icon:hover {
-    color: #FFFFFF !important;
-}
+/* PhotoSwipe Styles - Handled in gallery.blade.php */
 
 /* Confetti Animation Container */
 #confetti-container {

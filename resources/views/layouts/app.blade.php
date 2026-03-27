@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Faith & Samuel — Together Forever')</title>
-    <meta name="description" content="Faith & Samuel – Wedding Website">
 
     {{-- ===================== Primary Meta ===================== --}}
     <title>@yield('title', 'Faith & Samuel — Together Forever')</title>
@@ -25,56 +23,16 @@
     <meta property="og:image:alt"   content="Faith & Samuel — Together Forever">
     <meta property="og:locale"      content="en_US">
 
-    {{-- ===================== Twitter / X Card ===================== --}}
-    <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="@yield('twitter_title', 'Faith & Samuel — Together Forever')">
-    <meta name="twitter:description" content="@yield('twitter_description', 'We\'re getting married! Join us to celebrate our love story. Save the date and celebrate with us.')">
-    <meta name="twitter:image"       content="@yield('twitter_image', asset('gallery/1.jpg'))">
-    <meta name="twitter:image:alt"   content="Faith & Samuel — Together Forever">
-
-    {{-- ===================== WhatsApp / iMessage Rich Preview ===================== --}}
-    {{-- These re-use OG tags above — WhatsApp reads og:image, og:title, og:description --}}
-
     {{-- ===================== Favicon ===================== --}}
-    <link rel="icon"             type="image/png" sizes="32x32" href="{{ asset('favicon.ico') }}">
-    <link rel="icon"             type="image/png" sizes="16x16" href="{{ asset('favicon.ico') }}">
-    <link rel="apple-touch-icon" sizes="180x180"                href="{{ asset('favicon.ico') }}">
-    <meta name="theme-color" content="#b08b6e">
+    <link rel="icon" type="image/png" href="{{ asset('assets/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ asset('assets/favicon.ico') }}">
+    <meta name="theme-color" content="#4B0082">
 
-
-
-    <!-- Google Fonts -->
+    <!-- Google Fonts (trimmed to used weights only) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        {{-- ===================== Schema.org (Google Rich Results) ===================== --}}
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Event",
-        "name": "Faith & Samuel — Together Forever",
-        "description": "The wedding celebration of Faith and Samuel.",
-        "startDate": "YYYY-MM-DD",
-        "endDate": "YYYY-MM-DD",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {
-            "@type": "Place",
-            "name": "Venue Name",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "123 Venue Street",
-                "addressLocality": "City",
-                "addressRegion": "State",
-                "postalCode": "00000",
-                "addressCountry": "US"
-            }
-        },
-        "image": "{{ asset('gallery/1.jpg') }}",
-        "url": "{{ url('/') }}"
-    }
-    </script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -100,13 +58,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@icon/themify-icons/themify-icons.css">
 
     <!-- AOS Animate On Scroll -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <!-- LightGallery CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('assets/favicon.ico') }}">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- Custom Styles -->
     <style>
@@ -154,9 +106,6 @@
         .heart-animation { display: inline-block; animation: heart-beat 1.5s ease-in-out infinite; }
         @keyframes heart-beat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
 
-        /* Confetti container */
-        #confetti-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; }
-
         /* Gallery masonry */
         .gallery-masonry { column-count: 3; column-gap: 1rem; }
         @media (max-width: 1024px) { .gallery-masonry { column-count: 2; } }
@@ -198,16 +147,6 @@
 
         /* Banner image background */
         .banner-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
-
-        /* LightGallery wedding theme */
-        .lg-backdrop { background: rgba(75, 0, 130, 0.95) !important; }
-        .lg-toolbar { background: rgba(75, 0, 130, 0.8) !important; }
-        .lg-icon { color: #C8A2C8 !important; font-family: 'lg' !important; speak: never; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-        .lg-icon:hover { color: #FFFFFF !important; }
-        .lg-sub-html { background: rgba(75, 0, 130, 0.8) !important; color: white !important; }
-        .lg-counter { color: #C8A2C8 !important; }
-        .lg-prev::after, .lg-next::before { font-family: 'lg' !important; }
-        .lg-toolbar .lg-icon { font-size: 24px !important; }
 
         /* Mobile menu toggle */
         .mobile-menu-toggle { position: fixed; top: 16px; left: 16px; z-index: 9990; }
@@ -275,7 +214,7 @@
                             ['route' => 'gallery', 'label' => 'Gallery', 'icon' => 'ti-image'],
                             ['route' => 'wishes', 'label' => 'Wishes', 'icon' => 'ti-heart'],
                             ['route' => 'donate', 'label' => 'Gift', 'icon' => 'ti-gift'],
-                            ['route' => 'rsvp', 'label' => 'RSVP', 'icon' => 'ti-email'],
+                            // ['route' => 'rsvp', 'label' => 'RSVP', 'icon' => 'ti-email'],
                         ];
                     @endphp
                     @foreach($navItems as $item)
@@ -295,20 +234,9 @@
             <div class="p-6 text-center">
                 <div class="w-12 h-px bg-lilac/60 mx-auto mb-4"></div>
                 <p class="text-xs text-gray-400 font-nunito leading-relaxed">
-                    Faith & Samuel — Together Forever<br>
+                    #TheFSaffair💜<br>
                     Lagos, Nigeria
                 </p>
-                <div class="flex justify-center gap-3 mt-3">
-                    {{-- <a href="#" class="w-7 h-7 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs">
-                        <i class="ti-facebook"></i>
-                    </a>
-                    <a href="#" class="w-7 h-7 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs">
-                        <i class="ti-instagram"></i>
-                    </a>
-                    <a href="#" class="w-7 h-7 rounded-full bg-royal-purple/10 flex items-center justify-center hover:bg-royal-purple hover:text-white text-royal-purple transition-all duration-300 text-xs">
-                        <i class="ti-twitter"></i>
-                    </a> --}}
-                </div>
             </div>
         </aside>
 
@@ -337,23 +265,11 @@
         </div>
     @endif
 
-    <!-- Confetti Container -->
-    <div id="confetti-container"></div>
-
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
 
     <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-    <!-- LightGallery JS -->
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/video/lg-video.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
-
-    <!-- Canvas Confetti -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <script>
         // Initialize AOS
@@ -365,20 +281,6 @@
                 offset: 60,
             });
         });
-
-        // Confetti function
-        window.triggerConfetti = function() {
-            const duration = 3000;
-            const end = Date.now() + duration;
-            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
-            function rand(min, max) { return Math.random() * (max - min) + min; }
-            const interval = setInterval(function() {
-                if (Date.now() > end) return clearInterval(interval);
-                const count = 50 * ((end - Date.now()) / duration);
-                confetti(Object.assign({}, defaults, { particleCount: count, origin: { x: rand(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#4B0082', '#C8A2C8', '#FFFFFF', '#FF69B4'] }));
-                confetti(Object.assign({}, defaults, { particleCount: count, origin: { x: rand(0.7, 0.9), y: Math.random() - 0.2 }, colors: ['#C8A2C8', '#4B0082', '#FFFFFF', '#FF1493'] }));
-            }, 250);
-        };
 
         // Wedding Countdown
         (function () {
@@ -397,11 +299,5 @@
     </script>
 
     @yield('scripts')
-
-    @if(session('show_confetti'))
-        <script>
-            document.addEventListener('DOMContentLoaded', function() { triggerConfetti(); });
-        </script>
-    @endif
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Wishes - Faith & Samuel Wedding'); ?>
+<?php $__env->startSection('title', 'Wishes - Faith & Samuel — Together Forever'); ?>
 
 <?php $__env->startSection('content'); ?>
 <!-- Hero -->
@@ -11,7 +11,7 @@
         <span class="font-alex text-3xl sm:text-4xl block mb-3 opacity-90" data-aos="fade-down">Share Your Love</span>
         <h1 class="font-cormorant text-4xl sm:text-5xl lg:text-6xl font-semibold text-white mb-4" data-aos="fade-up" data-aos-delay="100">Wedding Wishes</h1>
         <p class="mt-4 text-white/80 max-w-2xl mx-auto font-nunito" data-aos="fade-up" data-aos-delay="200">
-            Leave us a heartfelt message or record a video wish. Your words will be treasured forever.
+            Leave us a heartfelt message or record a video . This will be cherished forever.
         </p>
     </div>
 </div>
@@ -64,7 +64,7 @@ unset($__errorArgs, $__bag); ?>
                         <div class="w-14 h-14 bg-royal-purple/10 rounded-2xl flex items-center justify-center mx-auto mb-3">
                             <i class="ti-video-camera text-xl text-royal-purple"></i>
                         </div>
-                        <p class="text-gray-500 text-sm mb-1">Record a video message (max 10MB)</p>
+                        <p class="text-gray-500 text-sm mb-1">Record a video (max 10MB)</p>
                         <p class="text-xs text-gray-400 mb-4">MP4, MOV, AVI, WMV formats supported</p>
                         <input type="file" id="video" name="video" accept="video/mp4,video/mov,video/avi,video/wmv" class="hidden">
                         <button type="button" onclick="document.getElementById('video').click()" class="inline-flex items-center px-5 py-2.5 bg-royal-purple/10 text-royal-purple rounded-xl hover:bg-royal-purple hover:text-white transition-all duration-300 text-sm font-nunito font-semibold">
@@ -102,7 +102,7 @@ unset($__errorArgs, $__bag); ?>
             <?php
                 $features = [
                     ['icon' => 'ti-pencil', 'title' => 'Written Wishes', 'desc' => 'Share your heartfelt thoughts and blessings in writing'],
-                    ['icon' => 'ti-video-camera', 'title' => 'Video Messages', 'desc' => 'Record a personal video wish up to 100MB'],
+                    ['icon' => 'ti-video-camera', 'title' => 'Video', 'desc' => 'Record a personal video up to 100MB'],
                     ['icon' => 'ti-heart', 'title' => 'Forever Treasured', 'desc' => 'Your wishes will be cherished memories for years to come'],
                 ];
             ?>

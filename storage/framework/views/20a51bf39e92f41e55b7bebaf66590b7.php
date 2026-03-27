@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'RSVP - Faith & Samuel Wedding'); ?>
+<?php $__env->startSection('title', 'RSVP - Faith & Samuel — Together Forever'); ?>
 
 <?php $__env->startSection('content'); ?>
 <!-- Hero -->
@@ -53,7 +53,7 @@
                                     <i class="ti-heart text-white text-lg"></i>
                                 </div>
                                 <h4 class="font-cormorant text-xl text-royal-purple mb-2">Share Your Wishes</h4>
-                                <p class="text-gray-500 text-sm mb-4">While you're here, leave us a heartfelt message or record a video wish!</p>
+                                <p class="text-gray-500 text-sm mb-4">While you're here, leave us a heartfelt message or record a video!</p>
                                 <a href="<?php echo e(route('wishes')); ?>" class="wedding-button inline-flex items-center justify-center">
                                     <i class="ti-pencil-alt mr-2"></i> Drop Your Wishes
                                 </a>
