@@ -1,4 +1,32 @@
-<?php $__env->startSection('title', 'Gallery - Faith & Samuel Wedding'); ?>
+<?php $__env->startSection('title', 'Gallery - Faith & Samuel — Together Forever'); ?>
+
+<?php $__env->startSection('styles'); ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.css">
+<style>
+    /* PhotoSwipe custom theme */
+    .pswp {
+        --pswp-bg: rgba(0, 0, 0, 0.95);
+        --pswp-icon-color: #FFFFFF;
+        --pswp-icon-color-secondary: #C8A2C8;
+        --pswp-error-text-color: #FFFFFF;
+    }
+    .pswp__top-bar {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    .pswp__counter {
+        color: #C8A2C8;
+    }
+    .pswp__button--arrow--left::before,
+    .pswp__button--arrow--right::before {
+        background: #FFFFFF;
+    }
+    .pswp__button:hover {
+        color: #C8A2C8;
+    }
+    
+    /* PhotoSwipe background override removed - videos use separate modal */
+</style>
+<?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
 <!-- Gallery Hero -->
@@ -12,7 +40,7 @@
         <span class="font-alex text-3xl sm:text-4xl block mb-3 opacity-90" data-aos="fade-down">Our Memories</span>
         <h1 class="font-cormorant text-4xl sm:text-5xl lg:text-6xl font-semibold text-white mb-4" data-aos="fade-up" data-aos-delay="100">Gallery</h1>
         <p class="mt-4 text-white/80 max-w-2xl mx-auto text-base sm:text-lg font-nunito" data-aos="fade-up" data-aos-delay="200">
-            Every image tells a part of our love story. Click any photo to view it in full.
+            Every image tells a part of our love story.
         </p>
         <div class="mt-6 flex justify-center gap-2" data-aos="fade-up" data-aos-delay="300">
             <span class="w-2 h-2 rounded-full bg-white/60"></span>
@@ -54,37 +82,66 @@
                 <?php $__currentLoopData = $galleryItems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <?php if($item['type'] === 'image'): ?>
                     <div class="gallery-item gallery-image group loading"
-                         data-type="image"
-                         data-src="<?php echo $item['src']; ?>"
-                         data-sub-html="<h4 class='font-cormorant'><?php echo e($item['caption']); ?></h4>"
+                         data-pswp-src="<?php echo $item['src']; ?>"
+                         data-pswp-width="1920"
+                         data-pswp-height="1080"
+                         data-pswp-type="image"
+                         data-caption="<?php echo e($item['caption']); ?>"
                          data-aos="fade-up"
                          data-aos-delay="<?php echo e(($index % 5) * 80); ?>">
-                        <!-- Shimmer wrapper -->
-                        <div class="shimmer-wrapper"></div>
+                        <!-- Shimmer wrapper with loading text -->
+                        <div class="shimmer-wrapper">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-10 h-10 border-2 border-lilac/30 border-t-lilac rounded-full animate-spin mx-auto mb-2"></div>
+                                    <p class="text-sm text-white/80 font-nunito">Image loading...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    <a href="<?php echo $item['src']; ?>" 
+                            data-pswp-src="<?php echo $item['src']; ?>"
+                            data-pswp-width="" 
+                            data-pswp-height="" 
+                            data-pswp-type="image"
+                            data-caption="<?php echo e($item['caption']); ?>"
+                            target="_blank">
+
                         <img src="<?php echo e($item['thumb']); ?>"
                              alt="<?php echo e($item['caption']); ?>"
-                             class="w-full h-auto"
+                             class="w-full h-auto opacity-0 transition-opacity duration-300"
                              loading="lazy"
-                             onload="console.log('Image loaded:', this.src); window.handleMediaLoad(this.closest('.gallery-item'))"
-                             onerror="console.log('Image error:', this.src); window.handleMediaError(this.closest('.gallery-item'))">
+                             onload="window.handleMediaLoad(this.closest('.gallery-item'))"
+                             onerror="window.handleMediaError(this.closest('.gallery-item'))">
+                            </a>
                     <?php else: ?>
                     <div class="gallery-item group loading"
-                         data-type="video"
-                         data-video-src="<?php echo $item['src']; ?>"
+                         data-pswp-src="<?php echo $item['src']; ?>"
+                         data-pswp-type="video"
+                         data-pswp-width="1920"
+                         data-pswp-height="1080"
+                         data-caption="<?php echo e($item['caption']); ?>"
                          data-aos="fade-up"
                          data-aos-delay="<?php echo e(($index % 5) * 80); ?>">
-                        <!-- Shimmer wrapper -->
-                        <div class="shimmer-wrapper"></div>
-                        <video class="w-full h-auto" 
+                        <!-- Shimmer wrapper with loading text -->
+                        <div class="shimmer-wrapper">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-10 h-10 border-2 border-lilac/30 border-t-lilac rounded-full animate-spin mx-auto mb-2"></div>
+                                    <p class="text-sm text-white/80 font-nunito">Video loading...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <video class="w-full h-auto opacity-0 transition-opacity duration-300" 
                                muted 
                                preload="metadata"
-                               onloadeddata="window.handleMediaLoad(this.closest('.gallery-item'))"
-                               onerror="window.handleMediaError(this.closest('.gallery-item'))">
+                               
                             <source src="<?php echo $item['src']; ?>" type="video/mp4">
                         </video>
                         <!-- Video play overlay -->
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-all duration-500"
-                             onclick="openVideoModal(this.closest('.gallery-item').dataset.videoSrc)">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-all duration-500 cursor-pointer z-30"
+                             onclick="console.log('Video overlay clicked'); openVideoModal('<?php echo $item['src']; ?>', '<?php echo e($item['caption']); ?>'); return false;"
+                             >
                             <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
                                 <i class="ti-control-play text-2xl ml-1" style="color: #4B0082;"></i>
                             </div>
@@ -166,154 +223,266 @@
 <!-- Video Modal -->
 <div id="video-modal" class="fixed inset-0 z-[9999] hidden" onclick="if(event.target===this)closeVideoModal()">
     <div class="absolute inset-0 bg-black/95"></div>
-    <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all">
+    <button onclick="console.log('Close button clicked'); closeVideoModal(); return false;" class="absolute top-4 right-4 z-40 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all">
         <i class="ti-close text-lg"></i>
     </button>
-    <div class="relative flex items-center justify-center w-full h-full p-4 sm:p-8">
-        <video id="modal-video" class="max-w-full max-h-full rounded-xl shadow-2xl" controls playsinline preload="metadata">
-        </video>
+    <div class="relative flex items-center justify-center w-full h-full p-4 sm:p-8 z-20">
+        <div class="text-center">
+            <video id="modal-video" class="max-w-full max-h-full rounded-xl shadow-2xl" controls playsinline preload="metadata">
+            </video>
+            <div class="video-caption mt-4 text-white text-lg font-cormorant hidden"></div>
+        </div>
     </div>
 </div>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('scripts'); ?>
+<!-- PhotoSwipe JS -->
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/umd/photoswipe.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/umd/photoswipe-lightbox.umd.min.js"></script>
 <style>
-/* Shimmer loading effect */
+/* Optimized shimmer loading effect */
 .gallery-item {
     position: relative;
     overflow: hidden;
+    border-radius: 0.75rem;
 }
 
 .gallery-item.loading .shimmer-wrapper {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background: linear-gradient(90deg, rgba(75, 0, 130, 0.1) 25%, rgba(200, 162, 200, 0.2) 50%, rgba(75, 0, 130, 0.1) 75%);
     background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
-    z-index: 1;
+    animation: shimmer 1.2s ease-in-out infinite;
+    z-index: 2;
     min-height: 200px;
-    border-radius: 0.5rem;
-    display: none; /* Temporarily disable shimmer */
+    backdrop-filter: blur(2px);
+    border-radius: 0.75rem;
 }
 
 @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0% { background-position: -200% 0; opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { background-position: 200% 0; opacity: 0.8; }
 }
 
 .gallery-item.loaded .shimmer-wrapper {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
 }
 
 .gallery-item.loading img,
 .gallery-item.loading video {
-    opacity: 1;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .gallery-item.loaded img,
 .gallery-item.loaded video {
     opacity: 1;
+    transform: scale(1);
+}
+
+/* Preload critical images */
+.gallery-item img[src*="thumb"] {
+    content-visibility: auto;
+    contain-intrinsic-size: 400px 300px;
 }
 </style>
 <script>
-// Make functions globally available
+// Optimized media loading functions
 window.handleMediaLoad = function(galleryItem) {
-    console.log('Media loaded:', galleryItem);
     if (galleryItem) {
         galleryItem.classList.remove('loading');
         galleryItem.classList.add('loaded');
+        
+        // Get the image and set dynamic dimensions
+        const img = galleryItem.querySelector('img');
+        const link = galleryItem.querySelector('a');
+        if (img && link) {
+            // Create a new image object to get real dimensions
+            const tempImg = new Image();
+            tempImg.onload = function() {
+                // Set the actual dimensions for PhotoSwipe
+                link.setAttribute('data-pswp-width', this.naturalWidth);
+                link.setAttribute('data-pswp-height', this.naturalHeight);
+                
+                // Fade in the image
+                setTimeout(() => {
+                    img.style.opacity = '1';
+                    img.style.transform = 'scale(1)';
+                }, 50);
+            };
+            tempImg.src = img.src;
+        } else {
+            // Fallback for non-image media
+            const media = galleryItem.querySelector('img, video');
+            if (media) {
+                setTimeout(() => {
+                    media.style.opacity = '1';
+                    media.style.transform = 'scale(1)';
+                }, 50);
+            }
+        }
     }
 };
 
 window.handleMediaError = function(galleryItem) {
-    console.log('Media error:', galleryItem);
     if (galleryItem) {
         galleryItem.classList.remove('loading');
-        galleryItem.classList.add('loaded');
-        // Optionally add an error state
-        galleryItem.classList.add('error');
+        galleryItem.classList.add('loaded', 'error');
+        
+        const media = galleryItem.querySelector('img, video');
+        if (media) {
+            media.style.opacity = '1';
+            media.style.transform = 'scale(1)';
+        }
+        
+        // Show error state
+        const shimmer = galleryItem.querySelector('.shimmer-wrapper');
+        if (shimmer) {
+            shimmer.innerHTML = '<div class="absolute inset-0 flex items-center justify-center"><div class="text-center"><i class="ti-alert text-2xl text-red-400 mb-2 block"></i><p class="text-sm text-white/80">Failed to load</p></div></div>';
+        }
     }
 };
 
-// Initialize existing media that might already be loaded
+// Initialize PhotoSwipe and optimize loading
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Checking for already loaded media...');
-    // Check for already loaded images and videos
+    // Initialize PhotoSwipe
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '#wedding-gallery',
+        children: '.gallery-item',
+        pswpModule: PhotoSwipe,
+        showHideAnimationType: 'fade',
+        bgOpacity: 0.95,
+        spacing: 0.12,
+        allowPanToNext: true,
+        loop: true,
+        pinchToClose: true,
+        tapToClose: true,
+        closeOnVerticalDrag: true,
+        mouseMovePan: true,
+        arrowKeys: true,
+        history: false,
+        preload: [1, 2],
+        errorMsg: 'The image could not be loaded'
+    });
+    
+    lightbox.on('beforeOpen', () => {
+        document.body.style.overflow = 'hidden';
+    });
+    
+    lightbox.on('close', () => {
+        document.body.style.overflow = '';
+    });
+    
+    lightbox.init();
+    
+    // Preload first few images for better UX
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const itemsToPreload = Math.min(6, galleryItems.length);
+    
+    for (let i = 0; i < itemsToPreload; i++) {
+        const item = galleryItems[i];
+        const img = item.querySelector('img');
+        if (img && !img.complete) {
+            const preloadImg = new Image();
+            preloadImg.src = img.src;
+        }
+    }
+    
+    // Check for already loaded media
     document.querySelectorAll('.gallery-item img, .gallery-item video').forEach(function(media) {
-        console.log('Found media:', media);
+        const galleryItem = media.closest('.gallery-item');
+        
         if (media.complete && media.naturalHeight !== 0) {
-            console.log('Image already loaded');
-            window.handleMediaLoad(media.closest('.gallery-item'));
-        } else if (media.readyState >= 2) { // For video
-            console.log('Video already loaded');
-            window.handleMediaLoad(media.closest('.gallery-item'));
+            window.handleMediaLoad(galleryItem);
+        } else if (media.readyState >= 2) {
+            window.handleMediaLoad(galleryItem);
         } else {
-            console.log('Media not yet loaded, will show shimmer');
-            // Add fallback timeout in case onload doesn't fire
-            setTimeout(function() {
-                if (media.closest('.gallery-item').classList.contains('loading')) {
-                    console.log('Fallback: Force showing media');
-                    window.handleMediaLoad(media.closest('.gallery-item'));
+            // Add optimized fallback
+            setTimeout(() => {
+                if (galleryItem.classList.contains('loading')) {
+                    window.handleMediaLoad(galleryItem);
                 }
-            }, 3000); // 3 second fallback
+            }, 2000);
         }
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const el = document.getElementById('wedding-gallery');
-    if (el && typeof lightGallery !== 'undefined') {
-        window.lgInstance = lightGallery(el, {
-            plugins: [lgZoom, lgThumbnail],
-            selector: '.gallery-image',
-            download: false,
-            thumbnail: true,
-            zoom: true,
-            keyboard: true,
-            animateThumb: true,
-            counter: true,
-            getCaptionFromTitleOrAlt: false,
-        });
+// Video modal functions (keep for videos)
+function openVideoModal(src, caption = '') {
+    console.log('openVideoModal called with:', src, caption);
+    const modal = document.getElementById('video-modal');
+    const video = document.getElementById('modal-video');
+    
+    if (!modal || !video) {
+        console.error('Video modal or video element not found');
+        return;
     }
-});
-
-function openVideoModal(src) {
-    var modal = document.getElementById('video-modal');
-    var video = document.getElementById('modal-video');
+    
+    console.log('Setting video src:', src);
     video.src = src;
+    
+    // Set caption if provided
+    const captionElement = modal.querySelector('.video-caption');
+    if (captionElement && caption) {
+        captionElement.textContent = caption;
+        captionElement.style.display = 'block';
+    } else if (captionElement) {
+        captionElement.style.display = 'none';
+    }
+    
     modal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
-    video.play();
+    console.log('Modal should be visible now');
+    
+    // Try to play the video
+    video.play().then(() => {
+        console.log('Video playing successfully');
+    }).catch(error => {
+        console.error('Video play error:', error);
+    });
 }
 
 function closeVideoModal() {
-    var modal = document.getElementById('video-modal');
-    var video = document.getElementById('modal-video');
+    console.log('closeVideoModal called');
+    const modal = document.getElementById('video-modal');
+    const video = document.getElementById('modal-video');
+    
+    if (!modal || !video) {
+        console.error('Modal or video element not found in close function');
+        return;
+    }
+    
+    console.log('Pausing video and closing modal');
     video.pause();
     video.src = '';
     modal.classList.add('hidden');
     document.body.style.overflow = '';
+    console.log('Modal should be hidden now');
 }
 
 document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeVideoModal();
+    if (e.key === 'Escape') {
+        closeVideoModal();
+    }
 });
 
 function filterGallery(type) {
     document.querySelectorAll('#wedding-gallery .gallery-item').forEach(function(item) {
-        if (type === 'all' || item.dataset.type === type) {
+        if (type === 'all' || item.dataset.pswpType === type) {
             item.style.display = '';
             item.style.opacity = '0';
-            setTimeout(function() { item.style.opacity = '1'; }, 50);
+            setTimeout(() => { item.style.opacity = '1'; }, 50);
         } else {
             item.style.display = 'none';
         }
     });
-    if (window.lgInstance) {
-        window.lgInstance.refresh();
-    }
 }
-</style>
+</script>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\wedding-site\resources\views/gallery.blade.php ENDPATH**/ ?>

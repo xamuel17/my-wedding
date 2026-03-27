@@ -77,7 +77,7 @@
                         </div>
                         <div>
                             <div class="text-2xl sm:text-3xl font-bold gradient-text font-nunito mb-1">{{ $wishes->whereNotNull('video_path')->count() }}</div>
-                            <div class="text-gray-500 text-xs sm:text-sm">Video Messages</div>
+                            <div class="text-gray-500 text-xs sm:text-sm">Video</div>
                         </div>
                         <div>
                             <div class="text-2xl sm:text-3xl font-bold gradient-text font-nunito mb-1">{{ $wishes->where('created_at', '>=', now()->subDays(7))->count() }}</div>

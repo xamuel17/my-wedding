@@ -33,9 +33,9 @@
             <div data-aos="fade-left" data-aos-delay="200">
                 <span class="font-alex text-2xl sm:text-3xl text-lilac block mb-2">Our love.</span>
                 <h3 class="font-cormorant text-3xl sm:text-4xl mb-6">How It All Began</h3>
-                                <p class="text-gray-500 mb-4 leading-relaxed">Faith and Samuel’s story began in the most ordinary place. What started as a simple conversation between strangers quickly grew into a genuine friendship, built on laughter, shared moments, and an easy connection.Over time, that friendship blossomed into love.
+                                <p class="text-gray-500 mb-4 leading-relaxed">Faith and Samuel’s story began in the most ordinary place. What started as a simple conversation between strangers quickly grew into a genuine friendship, built on laughter, shared moments, and an easy connection. Over time, that friendship blossomed into love.
 
-<p class="text-gray-500 mb-6 leading-relaxed">Life brought us even closer when we became colleagues in the same office, sharing not just workspaces but dreams, ideas, and daily experiences. Even when Faith moved on to a new opportunity, our bond only grew stronger.</p>
+<p class="text-gray-500 mb-6 leading-relaxed">Life brought us even closer when we became colleagues in the same work place, sharing not just workspaces but dreams, ideas, and daily experiences. Even when Faith moved on to a new opportunity, our bond only grew stronger.</p>
 
 
     <p class="text-gray-500 mb-4 leading-relaxed">At the heart of our love is a shared vision to build a life of purpose, self-sustainability, and financial freedom. Together, we are not just partners in love, but partners in ambition, working hand in hand to create a future, a business, and a life we truly believe in.</p>
@@ -94,18 +94,6 @@
                         </div>
                     @endforeach
                 </div>
-            </div>
-        </div>
-
-        <!-- Love Quote -->
-        <div class="mt-16 sm:mt-24 text-center" data-aos="zoom-in">
-            <div class="bg-gradient-to-br from-wedding-pink to-white rounded-2xl p-8 sm:p-12 max-w-3xl mx-auto shadow-lg">
-                <i class="ti-quote-left text-3xl sm:text-4xl text-lilac mb-4 block"></i>
-                <p class="font-alex text-2xl sm:text-3xl text-gray-700 mb-4 italic leading-relaxed">
-                    "Being deeply loved by someone gives you strength, while loving someone deeply gives you courage."
-                </p>
-                <div class="w-12 h-px bg-lilac mx-auto my-4"></div>
-                <p class="font-nunito text-gray-500 text-sm">— Lao Tzu</p>
             </div>
         </div>
 

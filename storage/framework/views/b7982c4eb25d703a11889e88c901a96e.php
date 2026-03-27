@@ -21,7 +21,7 @@
 
             <!-- View Invitation Button -->
             <div class="mt-6" data-aos="fade-up" data-aos-delay="600">
-                <button onclick="openFlipbook()"
+                <button onclick="openPdfViewer()"
                    class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full text-white hover:bg-white/20 hover:border-white/50 transition-all duration-300 text-sm font-nunito tracking-wider cursor-pointer">
                     <i class="ti-book text-lilac"></i> View Invitation Card
                 </button>
@@ -50,7 +50,7 @@
                 <div class="text-center sm:text-left">
                     <h6 class="font-cormorant text-2xl mb-1">Faith Michael <i class="ti-heart text-lilac text-sm heart-animation"></i></h6>
                     <span class="text-lilac font-alex text-xl">The Bride</span>
-                    <p class="mt-3 text-gray-500 text-sm leading-relaxed">Hi, I’m Faith. Lover of soft moments, deep belly laughter, and happily ever afters. I found my forever in Samuel, and now I’m counting down to a lifetime of love, joy, and inside jokes.</p>
+                    <p class="mt-3 text-gray-500 text-sm leading-relaxed">Faith is the magic you didn't see coming, but can't forget once you do. She didn’t just find love; She curated it, styled it, and made it entirely beautiful.</p>
                     <div class="flex justify-center sm:justify-start gap-2 mt-4">
                         
                     </div>
@@ -65,7 +65,7 @@
                 <div class="text-center sm:text-right">
                     <h6 class="font-cormorant text-2xl mb-1">Samuel Ogechukwu <i class="ti-heart text-lilac text-sm heart-animation"></i></h6>
                     <span class="text-lilac font-alex text-xl">The Groom</span>
-                    <p class="mt-3 text-gray-500 text-sm leading-relaxed">Meet the man of the hour, Samuel Ogechukwu. With a smile that lights up the room and a heart big enough to match, Samuel is the steady anchor in this love story.</p>
+                    <p class="mt-3 text-gray-500 text-sm leading-relaxed">Meet the man of the hour, Samuel Ogechukwu. With a smile that lights up the room and a very large heart. Samuel is the steady anchor in this love story.</p>
                     <div class="flex justify-center sm:justify-end gap-2 mt-4">
                         
                     </div>
@@ -74,7 +74,7 @@
         </div>
 
         <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
-            <h3 class="font-alex text-4xl sm:text-5xl gradient-text mb-3">Are getting married!</h3>
+            <h3 class="font-alex text-4xl sm:text-5xl gradient-text mb-3">We are getting married!</h3>
             <h4 class="font-cormorant text-lg sm:text-xl text-gray-600">May 30, 2026 — Lagos, Nigeria</h4>
         </div>
     </div>
@@ -231,11 +231,11 @@
             <div data-aos="fade-left" data-aos-delay="200">
                 <span class="font-alex text-2xl sm:text-3xl text-lilac block mb-2">Our love.</span>
                 <h3 class="font-cormorant text-3xl sm:text-4xl mb-6">Our Story</h3>
-                <p class="text-gray-500 mb-4 leading-relaxed">Faith and Samuel’s story began in the most ordinary place. What started as a simple conversation between strangers quickly grew into a genuine friendship, built on laughter, shared moments, and an easy connection.Over time, that friendship blossomed into love.
-                <p class="text-gray-500 mb-6 leading-relaxed">Life brought us even closer when we became colleagues in the same office, sharing not just workspaces but dreams, ideas, and daily experiences. Even when Faith moved on to a new opportunity, our bond only grew stronger.</p>
+                <p class="text-gray-500 mb-4 leading-relaxed">Faith and Samuel’s story began in the most ordinary place. What started as a simple conversation between strangers quickly grew into a genuine friendship, built on laughter, shared moments, and an easy connection.  Over time, that friendship blossomed into love.
+                <p class="text-gray-500 mb-6 leading-relaxed">Life brought us even closer when we became colleagues in the same work place, sharing not just workspaces but dreams, ideas, and daily experiences. Even when Faith moved on to a new opportunity, our bond only grew stronger.</p>
                 <div class="flex items-center gap-3 mb-6">
                     <div class="w-10 h-px bg-royal-purple"></div>
-                    <h4 class="font-cormorant text-lg text-royal-purple">April 5th, 2025, We Said Yes!</h4>
+                    <h4 class="font-cormorant text-lg text-royal-purple">October 2nd, 2025, We Said Yes!</h4>
                 </div>
                 <a href="<?php echo e(route('story')); ?>" class="wedding-button">Read Our Full Story</a>
             </div>
@@ -252,7 +252,7 @@
                     ['route' => 'gallery', 'icon' => 'ti-image', 'title' => 'Gallery', 'desc' => 'View our photos'],
                     ['route' => 'wishes', 'icon' => 'ti-heart', 'title' => 'Wishes', 'desc' => 'Send a message'],
                     ['route' => 'donate', 'icon' => 'ti-gift', 'title' => 'Gift', 'desc' => 'Support our journey'],
-                    ['route' => 'rsvp', 'icon' => 'ti-email', 'title' => 'RSVP', 'desc' => 'Confirm attendance'],
+                    // ['route' => 'rsvp', 'icon' => 'ti-email', 'title' => 'RSVP', 'desc' => 'Confirm attendance'],
                 ];
             ?>
             <?php $__currentLoopData = $links; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $link): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -270,35 +270,48 @@
     </div>
 </section>
 
-<!-- Flipbook Modal -->
-<div id="flipbook-modal" class="fixed inset-0 z-[9999] hidden">
-    <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="closeFlipbook()"></div>
-    <button onclick="closeFlipbook()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all">
+<!-- PDF Viewer Modal -->
+<div id="pdf-modal" class="fixed inset-0 z-[9999] hidden">
+    <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="closePdfViewer()"></div>
+    <button onclick="closePdfViewer()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all">
         <i class="ti-close text-lg"></i>
     </button>
 
-    <!-- Navigation Arrows -->
-    <button id="flipbook-prev" onclick="flipPrev()" class="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all">
-        <i class="ti-angle-left text-lg"></i>
-    </button>
-    <button id="flipbook-next" onclick="flipNext()" class="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all">
-        <i class="ti-angle-right text-lg"></i>
-    </button>
-
-    <!-- Page Counter -->
-    <div id="flipbook-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 text-white/70 text-sm font-nunito"></div>
-
-    <!-- Loading -->
-    <div id="flipbook-loading" class="absolute inset-0 flex items-center justify-center z-10">
-        <div class="text-center text-white">
-            <div class="w-12 h-12 border-3 border-white/30 border-t-lilac rounded-full animate-spin mx-auto mb-3"></div>
-            <p class="font-nunito text-sm text-white/70">Loading invitation...</p>
+    <div class="relative flex items-center justify-center w-full h-full p-4 sm:p-8">
+        <div class="bg-white rounded-lg shadow-2xl max-w-4xl max-h-[90vh] overflow-hidden">
+            <div class="flex items-center justify-between p-3 bg-gray-100 border-b">
+                <span class="text-sm font-medium text-gray-700">Invitation Card</span>
+                <div class="flex items-center gap-2">
+                    <button onclick="prevPage()" class="w-8 h-8 rounded bg-white hover:bg-gray-50 flex items-center justify-center text-gray-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" id="prev-btn">
+                        <i class="ti-angle-left text-xs"></i>
+                    </button>
+                    <span id="page-info" class="text-xs text-gray-500 w-16 text-center">1 / 2</span>
+                    <button onclick="nextPage()" class="w-8 h-8 rounded bg-white hover:bg-gray-50 flex items-center justify-center text-gray-600 transition-colors" id="next-btn">
+                        <i class="ti-angle-right text-xs"></i>
+                    </button>
+                    <div class="w-px h-4 bg-gray-300"></div>
+                    <button onclick="zoomOut()" class="w-8 h-8 rounded bg-white hover:bg-gray-50 flex items-center justify-center text-gray-600 transition-colors">
+                        <i class="ti-minus text-xs"></i>
+                    </button>
+                    <span id="zoom-level" class="text-xs text-gray-500 w-12 text-center">100%</span>
+                    <button onclick="zoomIn()" class="w-8 h-8 rounded bg-white hover:bg-gray-50 flex items-center justify-center text-gray-600 transition-colors">
+                        <i class="ti-plus text-xs"></i>
+                    </button>
+                    <button onclick="downloadPdf()" class="w-8 h-8 rounded bg-white hover:bg-gray-50 flex items-center justify-center text-gray-600 transition-colors">
+                        <i class="ti-download text-xs"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="relative overflow-auto" style="height: calc(90vh - 60px);">
+                <canvas id="pdf-canvas" class="mx-auto"></canvas>
+                <div id="pdf-loading" class="absolute inset-0 flex items-center justify-center bg-white/50">
+                    <div class="text-center">
+                        <div class="w-10 h-10 border-2 border-lilac/30 border-t-lilac rounded-full animate-spin mx-auto mb-2"></div>
+                        <p class="text-sm text-gray-600">Loading invitation...</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <!-- Flipbook Container -->
-    <div class="relative flex items-center justify-center w-full h-full p-12 sm:p-16">
-        <div id="flipbook-container" class="relative"></div>
     </div>
 </div>
 <?php $__env->stopSection(); ?>
@@ -306,141 +319,133 @@
 <?php $__env->startSection('scripts'); ?>
 <!-- PDF.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<!-- StPageFlip -->
-<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
 
 <script>
-var flipbookInstance = null;
+var pdfDoc = null;
+var pageNum = 1;
+var pageRendering = false;
+var pageNumPending = null;
+var scale = 1.5;
+var canvas = document.getElementById('pdf-canvas');
+var ctx = canvas.getContext('2d');
 var pdfUrl = "<?php echo e(asset('assets/images/invitation.pdf')); ?>";
 
-function openFlipbook() {
-    var modal = document.getElementById('flipbook-modal');
-    modal.classList.remove('hidden');
+function openPdfViewer() {
+    document.getElementById('pdf-modal').classList.remove('hidden');
     document.body.style.overflow = 'hidden';
-    loadPdfFlipbook();
+    loadPdf();
 }
 
-function closeFlipbook() {
-    var modal = document.getElementById('flipbook-modal');
-    modal.classList.add('hidden');
+function closePdfViewer() {
+    document.getElementById('pdf-modal').classList.add('hidden');
     document.body.style.overflow = '';
-    if (flipbookInstance) {
-        flipbookInstance.destroy();
-        flipbookInstance = null;
-    }
-    document.getElementById('flipbook-container').innerHTML = '';
-    document.getElementById('flipbook-loading').style.display = 'flex';
+    pdfDoc = null;
+    pageNum = 1;
+    scale = 1.5;
 }
 
-function flipPrev() {
-    if (flipbookInstance) flipbookInstance.flipPrev();
-}
-
-function flipNext() {
-    if (flipbookInstance) flipbookInstance.flipNext();
-}
-
-function updateCounter() {
-    if (!flipbookInstance) return;
-    var current = flipbookInstance.getCurrentPageIndex() + 1;
-    var total = flipbookInstance.getPageCount();
-    document.getElementById('flipbook-counter').textContent = 'Page ' + current + ' of ' + total;
-}
-
-function loadPdfFlipbook() {
+function loadPdf() {
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
+    
     pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
-        var totalPages = pdf.numPages;
-        var container = document.getElementById('flipbook-container');
-        container.innerHTML = '';
-
-        var renderPromises = [];
-
-        for (var i = 1; i <= totalPages; i++) {
-            (function(pageNum) {
-                renderPromises.push(
-                    pdf.getPage(pageNum).then(function(page) {
-                        var scale = 1.5;
-                        var viewport = page.getViewport({ scale: scale });
-                        var canvas = document.createElement('canvas');
-                        canvas.width = viewport.width;
-                        canvas.height = viewport.height;
-                        canvas.className = 'flipbook-page';
-                        canvas.dataset.pageNum = pageNum;
-
-                        var ctx = canvas.getContext('2d');
-                        return page.render({ canvasContext: ctx, viewport: viewport }).promise.then(function() {
-                            return { pageNum: pageNum, canvas: canvas, width: viewport.width, height: viewport.height };
-                        });
-                    })
-                );
-            })(i);
-        }
-
-        Promise.all(renderPromises).then(function(pages) {
-            pages.sort(function(a, b) { return a.pageNum - b.pageNum; });
-
-            var pageWidth = pages[0].width;
-            var pageHeight = pages[0].height;
-
-            // Scale to fit viewport
-            var maxW = window.innerWidth * 0.8;
-            var maxH = window.innerHeight * 0.75;
-            var ratio = Math.min(maxW / pageWidth, maxH / pageHeight, 1);
-            var finalW = Math.floor(pageWidth * ratio);
-            var finalH = Math.floor(pageHeight * ratio);
-
-            pages.forEach(function(p) {
-                var div = document.createElement('div');
-                div.className = 'page-content-wrapper';
-                div.style.cssText = 'width:' + finalW + 'px;height:' + finalH + 'px;';
-
-                var img = document.createElement('img');
-                img.src = p.canvas.toDataURL('image/jpeg', 0.92);
-                img.style.cssText = 'width:100%;height:100%;object-fit:contain;';
-                div.appendChild(img);
-                container.appendChild(div);
-            });
-
-            document.getElementById('flipbook-loading').style.display = 'none';
-
-            flipbookInstance = new St.PageFlip(container, {
-                width: finalW,
-                height: finalH,
-                size: 'fixed',
-                showCover: true,
-                mobileScrollSupport: false,
-                maxShadowOpacity: 0.5,
-                drawShadow: true,
-                flippingTime: 800,
-                usePortrait: true,
-                autoSize: true,
-            });
-
-            flipbookInstance.loadFromHTML(container.querySelectorAll('.page-content-wrapper'));
-            updateCounter();
-            flipbookInstance.on('flip', updateCounter);
-        });
-
+        pdfDoc = pdf;
+        document.getElementById('pdf-loading').style.display = 'none';
+        renderPage(pageNum);
     }).catch(function(error) {
         console.error('PDF load error:', error);
-        document.getElementById('flipbook-loading').innerHTML = '<div class="text-center text-white"><i class="ti-alert text-3xl text-lilac mb-3 block"></i><p class="font-nunito">Could not load invitation.</p><p class="text-xs text-white/50 mt-1">Make sure invitation.pdf is in public/assets/images/</p></div>';
+        document.getElementById('pdf-loading').innerHTML = '<div class="text-center"><i class="ti-alert text-2xl text-lilac mb-2 block"></i><p class="text-sm text-gray-600">Could not load invitation.</p></div>';
     });
 }
 
+function renderPage(num) {
+    pageRendering = true;
+    pdfDoc.getPage(num).then(function(page) {
+        var viewport = page.getViewport({scale: scale});
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        var renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+        };
+        var renderTask = page.render(renderContext);
+
+        renderTask.promise.then(function() {
+            pageRendering = false;
+            if (pageNumPending !== null) {
+                renderPage(pageNumPending);
+                pageNumPending = null;
+            }
+        });
+    });
+
+    updatePageInfo();
+    updateZoomLevel();
+}
+
+function queueRenderPage(num) {
+    if (pageRendering) {
+        pageNumPending = num;
+    } else {
+        renderPage(num);
+    }
+}
+
+function prevPage() {
+    if (pageNum <= 1) return;
+    pageNum--;
+    queueRenderPage(pageNum);
+}
+
+function nextPage() {
+    if (pageNum >= pdfDoc.numPages) return;
+    pageNum++;
+    queueRenderPage(pageNum);
+}
+
+function updatePageInfo() {
+    document.getElementById('page-info').textContent = pageNum + ' / ' + pdfDoc.numPages;
+    document.getElementById('prev-btn').disabled = pageNum <= 1;
+    document.getElementById('next-btn').disabled = pageNum >= pdfDoc.numPages;
+}
+
+function zoomIn() {
+    if (scale < 3) {
+        scale += 0.25;
+        queueRenderPage(pageNum);
+    }
+}
+
+function zoomOut() {
+    if (scale > 0.5) {
+        scale -= 0.25;
+        queueRenderPage(pageNum);
+    }
+}
+
+function updateZoomLevel() {
+    document.getElementById('zoom-level').textContent = Math.round(scale * 100) + '%';
+}
+
+function downloadPdf() {
+    var link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'invitation.pdf';
+    link.click();
+}
+
 document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        var modal = document.getElementById('flipbook-modal');
-        if (!modal.classList.contains('hidden')) closeFlipbook();
+    if (e.key === 'Escape' && !document.getElementById('pdf-modal').classList.contains('hidden')) {
+        closePdfViewer();
+    } else if (e.key === 'ArrowLeft' && !document.getElementById('pdf-modal').classList.contains('hidden')) {
+        prevPage();
+    } else if (e.key === 'ArrowRight' && !document.getElementById('pdf-modal').classList.contains('hidden')) {
+        nextPage();
     }
 });
 </script>
 
 <style>
-    #flipbook-container { perspective: 2000px; }
-    #flipbook-container .stf__parent { box-shadow: 0 10px 60px rgba(0,0,0,0.5); border-radius: 4px; }
-    #flipbook-container .page-content-wrapper { background: white; }
     .border-3 { border-width: 3px; }
 
     /* Fun Facts Auto-Scroll */

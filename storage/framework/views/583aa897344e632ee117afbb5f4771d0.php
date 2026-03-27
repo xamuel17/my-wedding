@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeddingBliss.ng — Pink & Dark Pink Wedding Websites</title>
+    <title>WeddingBliss.ng</title>
     <meta name="description" content="Elegant wedding invitation websites, galleries, and RSVP systems — now in beautiful pink and dark pink tones.">
 
     <!-- Google Fonts -->
@@ -193,7 +193,7 @@
     <footer class="bg-gray-900 py-12">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="flex items-center gap-2"><span class="font-inter font-bold text-white">Wedding<span class="text-[#FFB7D2]">Bliss</span><span class="text-white/40">.NG</span></span></div>
+                <div class="flex items-center gap-2"><i class="ti-heart text-[#FFB7D2]"></i><span class="font-inter font-bold text-white">Wedding<span class="text-[#FFB7D2]">Bliss</span><span class="text-white/40">.ng</span></span></div>
                 <p class="text-gray-500 text-sm">&copy; 2025 WeddingBliss.ng. All rights reserved.</p>
                 
             </div>

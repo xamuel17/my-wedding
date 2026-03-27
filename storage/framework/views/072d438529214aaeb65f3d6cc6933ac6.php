@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Wishes Showcase - Faith & Samuel Wedding'); ?>
+<?php $__env->startSection('title', 'Wishes Showcase - Faith & Samuel — Together Forever'); ?>
 
 <?php $__env->startSection('content'); ?>
 <!-- Hero -->
@@ -75,7 +75,7 @@
                         </div>
                         <div>
                             <div class="text-2xl sm:text-3xl font-bold gradient-text font-nunito mb-1"><?php echo e($wishes->whereNotNull('video_path')->count()); ?></div>
-                            <div class="text-gray-500 text-xs sm:text-sm">Video Messages</div>
+                            <div class="text-gray-500 text-xs sm:text-sm">Video</div>
                         </div>
                         <div>
                             <div class="text-2xl sm:text-3xl font-bold gradient-text font-nunito mb-1"><?php echo e($wishes->where('created_at', '>=', now()->subDays(7))->count()); ?></div>

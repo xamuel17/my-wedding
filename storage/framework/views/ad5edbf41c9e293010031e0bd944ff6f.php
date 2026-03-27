@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Donate - Faith & Samuel Wedding'); ?>
+<?php $__env->startSection('title', 'Donate - Faith & Samuel — Together Forever'); ?>
 
 <?php $__env->startSection('content'); ?>
 <!-- Hero -->
@@ -26,15 +26,15 @@
                 <div class="space-y-4">
                     <div class="flex justify-between items-center py-3 border-b border-gray-100">
                         <span class="font-nunito font-semibold text-gray-600 text-sm">Bank:</span>
-                        <span class="font-nunito text-gray-900 font-medium">Providus Bank</span>
+                        <span class="font-nunito text-gray-900 font-medium">First City Monument Bank (FCMB)</span>
                     </div>
                     <div class="flex justify-between items-center py-3 border-b border-gray-100">
                         <span class="font-nunito font-semibold text-gray-600 text-sm">Account Name:</span>
-                        <span class="font-nunito text-gray-900 font-medium">Unachukwu Samuel Ogechukwu</span>
+                        <span class="font-nunito text-gray-900 font-medium">Michael Faith And Unachukwu Samuel Ogechukwu</span>
                     </div>
                     <div class="flex justify-between items-center py-3 border-b border-gray-100">
                         <span class="font-nunito font-semibold text-gray-600 text-sm">Account Number:</span>
-                        <span class="font-nunito text-royal-purple font-bold text-lg tracking-wider">6507794507</span>
+                        <span class="font-nunito text-royal-purple font-bold text-lg tracking-wider">1047300235</span>
                     </div>
                 </div>
                 <div class="mt-6 p-4 bg-royal-purple/5 rounded-xl">
@@ -101,7 +101,7 @@ unset($__errorArgs, $__bag); ?>
                     <label class="flex items-start cursor-pointer group">
                         <input type="checkbox" name="confirm_transfer" value="1" required class="mt-1 mr-3 accent-royal-purple">
                         <span class="text-gray-600 text-sm group-hover:text-gray-800 transition-colors">
-                            I have already sent the money via bank transfer to the account above <span class="text-red-400">*</span>
+                            I have sent the funds via bank transfer to the account above <span class="text-red-400">*</span>
                         </span>
                     </label>
                     <?php $__errorArgs = ['confirm_transfer'];
@@ -120,17 +120,6 @@ unset($__errorArgs, $__bag); ?>
                     </button>
                 </div>
             </form>
-        </div>
-
-        <!-- Preview -->
-        <div class="max-w-2xl mx-auto mt-10 sm:mt-14" data-aos="fade-up" data-aos-delay="200">
-            <div class="bg-gradient-to-br from-wedding-pink to-white rounded-2xl p-8 text-center shadow-md">
-                <div class="w-16 h-16 bg-gradient-to-br from-royal-purple to-lilac rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <i class="ti-heart text-white text-2xl heart-animation"></i>
-                </div>
-                <h3 class="font-cormorant text-xl text-royal-purple mb-3">Thank You!</h3>
-                <p class="text-gray-500 text-sm">After confirming, you'll see a special celebration animation as our way of saying thank you!</p>
-            </div>
         </div>
     </div>
 </div>

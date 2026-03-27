@@ -73,9 +73,19 @@
 
 @if($showConfetti)
 @section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    if (typeof triggerConfetti === 'function') { triggerConfetti(); }
+    const duration = 3000;
+    const end = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+    function rand(min, max) { return Math.random() * (max - min) + min; }
+    const interval = setInterval(function() {
+        if (Date.now() > end) return clearInterval(interval);
+        const count = 50 * ((end - Date.now()) / duration);
+        confetti(Object.assign({}, defaults, { particleCount: count, origin: { x: rand(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#4B0082', '#C8A2C8', '#FFFFFF', '#FF69B4'] }));
+        confetti(Object.assign({}, defaults, { particleCount: count, origin: { x: rand(0.7, 0.9), y: Math.random() - 0.2 }, colors: ['#C8A2C8', '#4B0082', '#FFFFFF', '#FF1493'] }));
+    }, 250);
 });
 </script>
 @endsection

@@ -54,7 +54,7 @@
                                     <i class="ti-heart text-white text-lg"></i>
                                 </div>
                                 <h4 class="font-cormorant text-xl text-royal-purple mb-2">Share Your Wishes</h4>
-                                <p class="text-gray-500 text-sm mb-4">While you're here, leave us a heartfelt message or record a video wish!</p>
+                                <p class="text-gray-500 text-sm mb-4">While you're here, leave us a heartfelt message or record a video!</p>
                                 <a href="{{ route('wishes') }}" class="wedding-button inline-flex items-center justify-center">
                                     <i class="ti-pencil-alt mr-2"></i> Drop Your Wishes
                                 </a>

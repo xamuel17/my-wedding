@@ -84,28 +84,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Gallery Lightbox
-document.addEventListener('DOMContentLoaded', function() {
-    const galleries = document.querySelectorAll('.lightgallery');
-    galleries.forEach(function(gallery) {
-        lightGallery(gallery, {
-            plugins: [lgVideo, lgZoom, lgThumbnail],
-            selector: '.gallery-item',
-            download: false,
-            thumbnail: true,
-            zoom: true,
-            videoMaxSize: '100mb',
-            youtubePlayerParams: {
-                modestbranding: 1,
-                showinfo: 0,
-                controls: 1,
-                cc_load_policy: 0,
-                iv_load_policy: 3,
-                autohide: 0
-            }
-        });
-    });
-});
+// Gallery Lightbox - Now handled by PhotoSwipe in gallery.blade.php
 
 // Confetti Animation for Donation Success
 window.triggerConfetti = function() {
